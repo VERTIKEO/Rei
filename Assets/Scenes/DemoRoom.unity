@@ -8661,6 +8661,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 10302651021993394, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+        type: 3}
+      propertyPath: m_Name
+      value: Flashlight
+      objectReference: {fileID: 0}
     - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_Type
@@ -8669,17 +8674,27 @@ PrefabInstance:
     - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_Range
-      value: 11.81
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_Intensity
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_Shadows.m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303143633509516575, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+        type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 5838768606435717184, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
@@ -8759,12 +8774,17 @@ PrefabInstance:
     - target: {fileID: 7500434983777936021, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7500434983777936021, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500434983777936021, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9178607381889250959, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
