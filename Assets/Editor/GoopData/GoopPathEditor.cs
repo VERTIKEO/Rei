@@ -12,7 +12,7 @@ public class GoopPathEditor : Editor
 
 
     private GoopBehavior targetComponent;
-    private TreeVisitor<GoopPoint> treeDelegate;
+    private TreeVisitor<GoopKey> treeDelegate;
 
     // public GoopPathEditor() {
     //     treeDelegate = new TreeVisitor<GoopPoint>(DrawLine);
@@ -32,10 +32,14 @@ public class GoopPathEditor : Editor
         if(GUI.changed) {
             EditorUtility.SetDirty(targetComponent);
             EditorSceneManager.MarkSceneDirty(targetComponent.gameObject.scene);
+
+            // Remove old colliders
+            // Regenerate colliders
+            // Set colliders as static
         }
     }
 
-    void DrawLine(GoopPoint a, GoopPoint b) {
+    void DrawLine(GoopKey a, GoopKey b) {
         Handles.color = lineColor;
         Handles.DrawDottedLine(targetComponent.transform.position + a.position, targetComponent.transform.position + b.position, 4f);
 
