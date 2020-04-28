@@ -14,6 +14,8 @@ public class GoopPathEditor : Editor
     private GoopBehavior targetComponent;
     private TreeVisitor<GoopKey> treeDelegate;
 
+    //private static readonly StaticEditorFlags _STATIC_COLLIDER_FLAGS = new StaticEditorFlags();
+
     // public GoopPathEditor() {
     //     treeDelegate = new TreeVisitor<GoopPoint>(DrawLine);
     // }
@@ -33,9 +35,24 @@ public class GoopPathEditor : Editor
             EditorUtility.SetDirty(targetComponent);
             EditorSceneManager.MarkSceneDirty(targetComponent.gameObject.scene);
 
-            // Remove old colliders
-            // Regenerate colliders
             // Set colliders as static
+            //GameObjectUtility.SetStaticEditorFlags(object, StaticEditorFlags.)
+        }
+
+        
+    }
+
+    public override void OnInspectorGUI() {
+        DrawDefaultInspector();
+
+        if(GUILayout.Button("Generate colliders")) {
+            // Regenerate colliders
+            targetComponent.ClearColliders();
+            targetComponent.GenerateColliders();
+        }
+
+        if(GUILayout.Button("Clear colliders")) {
+            targetComponent.ClearColliders();
         }
     }
 

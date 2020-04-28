@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public struct GoopKey {
+public class GoopKey {
     [SerializeField] public Vector3 position;
     [SerializeField] public float density;
     [SerializeField] public float time;
