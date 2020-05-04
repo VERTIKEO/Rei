@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,14 +24,25 @@ public class GoopKey {
 public struct Ball {
     [SerializeField] public Vector3 pos;
     [SerializeField] public float radius;
-    [SerializeField] public float wiggle;
+
+    [SerializeField] public bool negativeBall;
 
     // TODO: add padding to reach 32 bytes
 
+    // Getters
+    [SerializeField] public float wiggle;
+    public float radiusSq {
+        get { return (this.negativeBall ? -1 : 1) * this.radius * this.radius; }
+        
+    }
+
+    // Initializers
     public Ball(GoopKey key) {
         this.pos = key.position;
-        this.radius = key.density / 2f;
+        this.negativeBall = false;
         this.wiggle = 0f;
+
+        this.radius = key.density;
     }
 
     Vector3 Animate(float delta) {
@@ -42,27 +54,49 @@ public struct Ball {
 
 public class GoopBehavior : MonoBehaviour
 {
-    public List<GoopKey> path;
+    private static readonly string _SUBCOLLIDER_NAME = "Subcollider";
+    private static readonly float _EPSILON = 0.00001f;
+
+    [SerializeField] public List<GoopKey> path;
     public Material material;
     public PhysicMaterial physicMaterial;
     public bool isCollisionTrigger = false;
 
-    [Header("Quality parameters")]
-    public float isoLevel = 0.5f;
-    //public float 
+    [Header("Mesh generation parameters")]
+    public MetaballContainer container;
+    public float safeZone;
+    public float resolution;
+    public float threshold;
 
     //[Header("Animation parameters")]
 
+    [Header("Debug operations")]
+    public bool useGpu = true;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         Populate();
+        UpdateContainer();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void Clear() {
+        ClearColliders();
+        container.OnDestroy();
+    }
+
+    void UpdateContainer() {
+        container.metaballs = _metaballs.ToArray();
+        container.safeZone = this.safeZone;
+        container.resolution = this.resolution;
+        container.threshold = this.threshold;
+        container.useGpu = this.useGpu;
     }
 
     /*
@@ -103,7 +137,7 @@ public class GoopBehavior : MonoBehaviour
     }
 
     public void ClearColliders() {
-        foreach(Transform child in this.transform) {
+        foreach(Transform child in this.transform.Cast<Transform>().ToList()) {
             if(child.name == _SUBCOLLIDER_NAME) {
                 DestroyImmediate(child.gameObject);
             }
@@ -121,21 +155,21 @@ public class GoopBehavior : MonoBehaviour
         Ball[] intrakeys = _GenerateIntrakeys(first, last);
 
         // Step 2) instantiate colliders for intrakeys
-        foreach (Ball ball in intrakeys) {
-            GameObject obj = new GameObject(_SUBCOLLIDER_NAME);
-            obj.transform.parent = this.transform;
+        // foreach (Ball ball in intrakeys) {
+        //     GameObject obj = new GameObject(_SUBCOLLIDER_NAME);
+        //     obj.transform.parent = this.transform;
 
-            // add components
-            obj.AddComponent<SphereCollider>();
+        //     // add components
+        //     obj.AddComponent<SphereCollider>();
 
-            // set attributes
-            SphereCollider collider = obj.GetComponent<SphereCollider>();
-            collider.radius = ball.radius;
-            collider.material = this.physicMaterial;
-            collider.isTrigger = this.isCollisionTrigger;
+        //     // set attributes
+        //     SphereCollider collider = obj.GetComponent<SphereCollider>();
+        //     collider.radius = ball.radius;
+        //     collider.material = this.physicMaterial;
+        //     collider.isTrigger = this.isCollisionTrigger;
 
-            obj.transform.localPosition = ball.pos;
-        }
+        //     obj.transform.localPosition = ball.pos;
+        // }
 
         // Step 3) generate particle metaballs
         Ball[] particles = {};

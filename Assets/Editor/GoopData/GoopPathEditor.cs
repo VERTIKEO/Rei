@@ -32,11 +32,15 @@ public class GoopPathEditor : Editor
 
         // Mark scene as dirty
         if(GUI.changed) {
+            // clear data
+            targetComponent.Clear();
+
             EditorUtility.SetDirty(targetComponent);
             EditorSceneManager.MarkSceneDirty(targetComponent.gameObject.scene);
 
             // Set colliders as static
             //GameObjectUtility.SetStaticEditorFlags(object, StaticEditorFlags.)
+
         }
 
         
@@ -44,6 +48,12 @@ public class GoopPathEditor : Editor
 
     public override void OnInspectorGUI() {
         DrawDefaultInspector();
+
+        if(GUILayout.Button("Generate model")) {
+            targetComponent.Start();
+            targetComponent.container.Start();
+            targetComponent.container.Update();
+        }
 
         if(GUILayout.Button("Generate colliders")) {
             // Regenerate colliders
