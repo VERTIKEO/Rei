@@ -54,6 +54,7 @@ public struct Ball {
 
 public class GoopBehavior : MonoBehaviour
 {
+    private static readonly string _SEGMENT_NAME = "Segment";
     private static readonly string _SUBCOLLIDER_NAME = "Subcollider";
     private static readonly float _EPSILON = 0.00001f;
 
@@ -62,41 +63,57 @@ public class GoopBehavior : MonoBehaviour
     public PhysicMaterial physicMaterial;
     public bool isCollisionTrigger = false;
 
-    [Header("Mesh generation parameters")]
-    public MetaballContainer container;
-    public float safeZone;
-    public float resolution;
-    public float threshold;
+    [Header("Visual parameters")]
+    public float safeZone = 0.2f;
+    
 
     //[Header("Animation parameters")]
 
-    [Header("Debug operations")]
-    public bool useGpu = true;
+    // [Header("Debug operations")]
+    // public bool useGpu = true;
 
     // Start is called before the first frame update
     public void Start()
     {
         Populate();
-        UpdateContainer();
+        UpdateRenderer();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
+        SimulateMetaballs();
+        UpdateRenderer();
     }
 
     public void Clear() {
         ClearColliders();
-        container.OnDestroy();
+        // container.OnDestroy();
     }
 
-    void UpdateContainer() {
-        container.metaballs = _metaballs.ToArray();
-        container.safeZone = this.safeZone;
-        container.resolution = this.resolution;
-        container.threshold = this.threshold;
-        container.useGpu = this.useGpu;
+    void UpdateRenderer() {
+        int ac = 0;
+        foreach(KeyValuePair<GameObject, int> segment in _segmentsCount) {
+            Vector4[] balls = new Vector4[16];
+            int length = Math.Min(16, segment.Value);
+
+            Debug.Log("Segment: " + segment.Key.transform.localPosition);
+
+            if(length < segment.Value) {
+                Debug.LogWarning("Segment has extra items over max count");
+            }
+
+            for(int i = 0; i < length; i++) {
+                Ball b = _metaballs[ac + i];
+                balls[i] = new Vector4(b.pos.x, b.pos.y, b.pos.z, b.radius);
+                Debug.Log("Ball: " + balls[i].ToString());
+            }
+
+            MeshRenderer renderer = segment.Key.GetComponent<MeshRenderer>();
+            renderer.material.SetVectorArray("_Balls", balls);
+            renderer.material.SetInt("_BallsCount", length);
+
+            ac += length;
+        }
     }
 
     /*
@@ -105,6 +122,7 @@ public class GoopBehavior : MonoBehaviour
     [HideInInspector]
     public bool isCollisionBaked;
     private List<Ball> _metaballs;
+    private Dictionary<GameObject, int> _segmentsCount = new Dictionary<GameObject, int>();
 
     void SimulateMetaballs() {
 
@@ -133,45 +151,70 @@ public class GoopBehavior : MonoBehaviour
     }
 
     public void GenerateColliders() {
+        ClearColliders();
         Populate();
+        UpdateRenderer();
     }
 
     public void ClearColliders() {
-        foreach(Transform child in this.transform.Cast<Transform>().ToList()) {
-            if(child.name == _SUBCOLLIDER_NAME) {
-                DestroyImmediate(child.gameObject);
-            }
+        foreach(GameObject child in _segmentsCount.Keys) {
+            DestroyImmediate(gameObject);
         }
     }
 
     // TODO: split in more functions
     IEnumerable<Ball> PopulateSegment(Ball first, Ball last) {
         List<Ball> balls = new List<Ball>();
-        // Vector3 segment = last.pos - first.pos;
-        // Vector3 segmentNormal = segment.normalized;
-        // float segmentLength = segment.magnitude;
+        Vector3 segmentVector = last.pos - first.pos;
+        Vector3 segmentNormal = segmentVector.normalized;
+        float segmentLength = segmentVector.magnitude;
 
-        // Step 1) generate intra-keys
+        // Step 1) create segment GameObject
+        GameObject segment = new GameObject(_SEGMENT_NAME);
+        {
+            segment.transform.parent = this.transform;
+
+            // set transform
+            float boxSide = Mathf.Max(first.radius, last.radius) * 2f;
+            segment.transform.localScale = new Vector3(segmentLength + first.radius + last.radius + safeZone, boxSide + safeZone, boxSide + safeZone);
+            segment.transform.localPosition = (first.pos + last.pos) / 2f;
+            segment.transform.localRotation = Quaternion.LookRotation(segmentNormal);
+            segment.transform.localEulerAngles = segment.transform.localEulerAngles - new Vector3(0, -90f, 0);
+
+            // add collider component
+            BoxCollider box = segment.AddComponent<BoxCollider>();
+            box.isTrigger = this.isCollisionTrigger;
+            //box.size =    // TODO: subtract the safeZone from collider size
+
+            // add mesh components
+            MeshFilter mesh = segment.AddComponent<MeshFilter>();
+            mesh.mesh = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath< Mesh > ( "Library/unity default resources::Cube");
+
+            MeshRenderer renderer = segment.AddComponent<MeshRenderer>();
+            renderer.sharedMaterial = this.material;
+        }
+
+        // Step 2) generate intra-keys
         Ball[] intrakeys = _GenerateIntrakeys(first, last);
 
-        // Step 2) instantiate colliders for intrakeys
-        // foreach (Ball ball in intrakeys) {
-        //     GameObject obj = new GameObject(_SUBCOLLIDER_NAME);
-        //     obj.transform.parent = this.transform;
+        // Step 3) instantiate subcolliders for intrakeys
+        foreach (Ball ball in intrakeys) {
+            GameObject obj = new GameObject(_SUBCOLLIDER_NAME);
+            obj.transform.parent = segment.transform;
 
-        //     // add components
-        //     obj.AddComponent<SphereCollider>();
+            // add components
+            obj.AddComponent<SphereCollider>();
 
-        //     // set attributes
-        //     SphereCollider collider = obj.GetComponent<SphereCollider>();
-        //     collider.radius = ball.radius;
-        //     collider.material = this.physicMaterial;
-        //     collider.isTrigger = this.isCollisionTrigger;
+            // set attributes
+            SphereCollider collider = obj.GetComponent<SphereCollider>();
+            collider.radius = ball.radius;
+            collider.material = this.physicMaterial;
+            collider.isTrigger = this.isCollisionTrigger;
 
-        //     obj.transform.localPosition = ball.pos;
-        // }
+            // obj.transform.localPosition = ball.pos;
+        }
 
-        // Step 3) generate particle metaballs
+        // Step 4) generate particle metaballs
         Ball[] particles = {};
         {
 
@@ -180,6 +223,19 @@ public class GoopBehavior : MonoBehaviour
 
         balls.AddRange(intrakeys);
         balls.AddRange(particles);
+
+        // offset balls' position
+        for(int i = 0; i < balls.Count; i++){
+            Vector3 pos = balls[i].pos - segment.transform.localPosition;
+            pos = segment.transform.localRotation * pos;
+            
+            Ball b = balls[i];
+            b.pos = pos;
+            balls[i] = b;
+        }
+
+        _segmentsCount.Add(segment, balls.Count);
+
         return balls;
     }
 
@@ -210,17 +266,28 @@ public class GoopBehavior : MonoBehaviour
             intraspheres = _FitSpheresInCylinder(last.radius, segmentLength);
 
         // put intraspheres along segment
-        Ball[] intrakeys = new Ball[intraspheres.Length];
+        Ball[] intrakeys = new Ball[intraspheres.Length + 2];
         Debug.Log("Intrasphere count: " + intraspheres.Length);
 
+        // add first and last keys
+        intrakeys[0].pos = segmentNormal * (first.radius); // TODO: make position extension interpolable
+        intrakeys[0].radius = first.radius;
+        intrakeys[0].wiggle = 0;
+
+        intrakeys[intrakeys.Length - 1].pos = segmentNormal * (last.radius); // TODO: make position extension interpolable
+        intrakeys[intrakeys.Length - 1].radius = last.radius;
+        intrakeys[intrakeys.Length - 1].wiggle = 0;
+        
+
+        // add intraspheres
         Ball prevKey = first;
         for (int i = 0; i <intraspheres.Length; i++) {
             // position: previous position + direction normal * (previous radius + current diameter)
-            intrakeys[i].pos = prevKey.pos + segmentNormal * (prevKey.radius + intraspheres[i]); // TODO: make position extension interpolable
-            intrakeys[i].radius = intraspheres[i];
-            intrakeys[i].wiggle = 0;
+            intrakeys[i + 1].pos = prevKey.pos + segmentNormal * (prevKey.radius + intraspheres[i]); // TODO: make position extension interpolable
+            intrakeys[i + 1].radius = intraspheres[i];
+            intrakeys[i + 1].wiggle = 0;
 
-            prevKey = intrakeys[i];
+            prevKey = intrakeys[i + 1];
         }
 
         return intrakeys;
