@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,12 +9,15 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 10;
+    public Transform cameraTransform;
 
     public List<string> inventory;
+
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+ 
     }
 
     // Update is called once per frame
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
         if (characterController.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical")).normalized;
+            moveDirection = cameraTransform.TransformDirection(moveDirection);
+            moveDirection.y = 0.0f;
         }
 
         if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
