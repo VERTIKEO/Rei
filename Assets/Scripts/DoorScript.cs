@@ -106,7 +106,7 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-    void CloseDoor()
+    public void CloseDoor()
     {
         if (open == true)
         {
