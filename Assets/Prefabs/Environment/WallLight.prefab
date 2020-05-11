@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 8965303682301316883}
   - component: {fileID: 4155364986132162713}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: WallLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965303682301316883
 Transform:

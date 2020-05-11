@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &537971339719942114
 Transform:
@@ -107,7 +107,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6825507373034805633
 Transform:
@@ -191,6 +191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_RoofDefualt
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 963cf39ad383f444aa04d11f0a2c4495,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963cf39ad383f444aa04d11f0a2c4495, type: 3}
