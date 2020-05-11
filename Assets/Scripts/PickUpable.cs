@@ -26,7 +26,7 @@ public class PickUpable : MonoBehaviour
                 PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
                 playerController.inventory.Add(gameObject.name);
 
-                Debug.Log("picked up");
+                Debug.Log("picked up " + gameObject);
                 gameObject.SetActive(false);
             }
         }
