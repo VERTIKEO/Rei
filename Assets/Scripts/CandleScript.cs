@@ -5,8 +5,7 @@ using UnityEngine;
 public class CandleScript : MonoBehaviour
 {
 
-    public GameObject puzzleDoor;
-    DoorScript doorScript;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +29,6 @@ public class CandleScript : MonoBehaviour
                 playerController.inventory.Add(gameObject.name);
 
                 Debug.Log("picked up " + gameObject);
-                doorScript = puzzleDoor.GetComponent<DoorScript>();
-                doorScript.CloseDoor();
                 gameObject.SetActive(false);
             }
         }
