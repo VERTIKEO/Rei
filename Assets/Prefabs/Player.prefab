@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2529283355840342492}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravity: 1
+  inventory: []
 --- !u!136 &-2193655549332354219
 CapsuleCollider:
   m_ObjectHideFlags: 0
