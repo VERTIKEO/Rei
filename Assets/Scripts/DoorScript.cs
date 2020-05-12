@@ -64,7 +64,7 @@ public class DoorScript : MonoBehaviour
 
 
                 //modifying the Vector3, based on input multiplied by speed and time
-                currentEulerAngles = new Vector3(0, Mathf.Lerp(-doorOpenAngle, 0, time), 0);
+                currentEulerAngles = new Vector3(0, Mathf.Lerp(180, 0, time), 0);
 
                 //moving the value of the Vector3 into Quanternion.eulerAngle format
                 currentRotation.eulerAngles = currentEulerAngles;
