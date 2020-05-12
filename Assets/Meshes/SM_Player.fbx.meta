@@ -3,7 +3,27 @@ guid: 3a1e6e79585f82c4fada1d225221ab51
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark
+    second: {fileID: 2100000, guid: 4b4d3ce017504574b9f36ae9990f3337, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: 81c15f88287858a4abea33bdd3a99556, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 19b909f9734833f448b96c8f5f57975e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 607211e0b67dac74d9825d68c5ad9b5c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
