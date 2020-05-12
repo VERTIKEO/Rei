@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
+    public string thought;
     public GameObject ghostGirl;
     public GameObject puzzleDoor;
+    public GameObject playerThoughts;
+    TextMesh thoughts;
     DoorScript doorScript;
 
     bool firstTimeRead = true;
@@ -13,7 +16,7 @@ public class Book : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        thoughts = playerThoughts.GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,9 @@ public class Book : MonoBehaviour
         
         if (other.gameObject.tag == "Player" && Input.GetButtonDown("Fire1"))
         {
-            //VN Script Here
+
+            playerThoughts.SetActive(true);
+            thoughts.text = thought;             //text here
             if (firstTimeRead = true)
             {
                 ghostGirl.SetActive(true);
