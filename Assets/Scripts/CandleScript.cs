@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpable : MonoBehaviour
+public class CandleScript : MonoBehaviour
 {
+
+    public GameObject playerThoughts;
+    TextMesh thoughts;
     // Start is called before the first frame update
     void Start()
     {
-        
+        thoughts = playerThoughts.GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -22,11 +25,11 @@ public class PickUpable : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                
+
                 PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
                 playerController.inventory.Add(gameObject.name);
-
-                Debug.Log("picked up " + gameObject);
+                playerThoughts.SetActive(true);
+                thoughts.text = "Picked up " + gameObject;
                 gameObject.SetActive(false);
             }
         }

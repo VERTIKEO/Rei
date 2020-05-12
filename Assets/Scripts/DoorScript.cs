@@ -11,6 +11,7 @@ public class DoorScript : MonoBehaviour
     public string keyItem;
 
     bool open = false;
+    bool closing = false;
     bool enter = false;
     public bool locked = false;
 
@@ -54,6 +55,28 @@ public class DoorScript : MonoBehaviour
             }
         }
 
+        if (closing == true)
+        {
+            if (_timer > 0)
+            {
+                float time = _timer / openTime;
+                _timer -= Time.deltaTime;
+
+
+                //modifying the Vector3, based on input multiplied by speed and time
+                currentEulerAngles = new Vector3(0, Mathf.Lerp(-doorOpenAngle, 0, time), 0);
+
+                //moving the value of the Vector3 into Quanternion.eulerAngle format
+                currentRotation.eulerAngles = currentEulerAngles;
+
+                //apply the Quaternion.eulerAngles change to the gameObject
+                transform.rotation = currentRotation;
+
+                if (_timer <= 0)
+                    open = false;
+
+            }
+        }
 
 
     }
@@ -71,11 +94,25 @@ public class DoorScript : MonoBehaviour
                 _timer = openTime;
                 Debug.Log("Unlocked door and removed " + keyItem);
             }
+            if (locked == true)
+            {
+                Debug.Log("You lack " + keyItem);
+            }
             else
             {
                 _timer = openTime;
             }
 
         }
+    }
+
+    public void CloseDoor()
+    {
+        if (open == true)
+        {
+            closing = true;
+            _timer = openTime;
+        }
+
     }
 }
