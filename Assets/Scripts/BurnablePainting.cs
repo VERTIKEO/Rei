@@ -5,9 +5,13 @@ using UnityEngine;
 public class BurnablePainting : MonoBehaviour
 {
     public string candle = "Candle";
+    public string rightBurn;
+    public string wrongBurn;
     public bool isTorsaker = false;
 
     public GameObject door;
+    public GameObject playerThoughts;
+    TextMesh thoughts;
     DoorScript doorScript;
     PlayerController playerController;
     
@@ -15,6 +19,7 @@ public class BurnablePainting : MonoBehaviour
     void Start()
     {
         doorScript = door.GetComponent<DoorScript>();
+        thoughts = playerThoughts.GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -31,13 +36,14 @@ public class BurnablePainting : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains(candle) && isTorsaker == true)
             {
-                Debug.Log("You burn the right Painting!");
+                playerThoughts.SetActive(true);
+                thoughts.text = rightBurn;
                 doorScript.locked = false;
                 gameObject.SetActive(false);
             }
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains("Candle"))
             {
-                Debug.Log("You burn the Painting");
+                thoughts.text = wrongBurn;
                 gameObject.SetActive(false);
             }
         }
