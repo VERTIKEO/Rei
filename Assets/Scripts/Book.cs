@@ -5,6 +5,7 @@ using UnityEngine;
 public class Book : MonoBehaviour
 {
     public string thought;
+    public string thought2;
     public GameObject ghostGirl;
     public GameObject puzzleDoor;
     public GameObject playerThoughts;
@@ -32,16 +33,18 @@ public class Book : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetButtonDown("Fire1"))
         {
 
-            playerThoughts.SetActive(true);
-            thoughts.text = thought;             //text here
-            if (firstTimeRead = true)
+            if (firstTimeRead == true)
             {
+                playerThoughts.SetActive(true);
+                thoughts.text = "What's such a nice book doing out in an abandoned house?";             //text here
                 ghostGirl.SetActive(true);
                 doorScript = puzzleDoor.GetComponent<DoorScript>();
                 doorScript.CloseDoor();
                 //VN Script here
                 firstTimeRead = false;
             }
+            playerThoughts.SetActive(true);
+            thoughts.text = thought2;
 
         }
     }

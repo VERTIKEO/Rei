@@ -25,10 +25,14 @@ public class ThoughtRotation : MonoBehaviour
     {
         gameObject.transform.rotation = Camera.main.transform.rotation;
         gameObject.transform.position = player.transform.position + Vector3.up * 2f;
-        while (remainingThoughtTime >= 0)
+        if (remainingThoughtTime >= 0)
         {
-            remainingThoughtTime -= remainingThoughtTime - Time.deltaTime;
+            remainingThoughtTime -= Time.deltaTime;
         }
-        gameObject.SetActive(false);
+        if (remainingThoughtTime <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+
     }
 }

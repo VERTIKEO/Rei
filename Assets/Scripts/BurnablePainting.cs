@@ -11,6 +11,7 @@ public class BurnablePainting : MonoBehaviour
 
     public GameObject door;
     public GameObject playerThoughts;
+    public GameObject ghostGirl;
     TextMesh thoughts;
     DoorScript doorScript;
     PlayerController playerController;
@@ -37,13 +38,14 @@ public class BurnablePainting : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains(candle) && isTorsaker == true)
             {
                 playerThoughts.SetActive(true);
-                thoughts.text = rightBurn;
+                thoughts.text = "" + rightBurn;
                 doorScript.locked = false;
+                ghostGirl.SetActive(false);
                 gameObject.SetActive(false);
             }
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains("Candle"))
             {
-                thoughts.text = wrongBurn;
+                thoughts.text = "" + wrongBurn;
                 gameObject.SetActive(false);
             }
         }
