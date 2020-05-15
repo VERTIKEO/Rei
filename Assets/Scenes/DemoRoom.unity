@@ -559,7 +559,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
@@ -4497,6 +4497,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2702787c3cdc0714aa49dfc3a414f0e0, type: 3}
+--- !u!1 &1080580544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080580546}
+  - component: {fileID: 1080580545}
+  m_Layer: 0
+  m_Name: TheGoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1080580545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080580544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04c2980c41584fd386353c77277ef93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path:
+  - position: {x: -6.68132, y: 0, z: 3.3843346}
+    density: 0.5
+    time: 0
+  - position: {x: -6.67865, y: 0, z: -2.050766}
+    density: 0.5
+    time: 0
+  - position: {x: -3.6451569, y: 0, z: -2.050766}
+    density: 0.5
+    time: 0
+  - position: {x: -3.6568756, y: 0, z: -4.9954443}
+    density: 0.5
+    time: 0
+  - position: {x: -1.1413536, y: 0, z: -5.0656357}
+    density: 0.5
+    time: 0
+  - position: {x: -0.69251823, y: 0, z: -4.088278}
+    density: 0.5
+    time: 0
+  - position: {x: 1.420371, y: 0, z: -4.1394367}
+    density: 0.5
+    time: 0
+  - position: {x: 1.7322712, y: 0, z: -5.060691}
+    density: 0.5
+    time: 0
+  - position: {x: 5.034772, y: 0, z: -5.085988}
+    density: 0.5
+    time: 0
+  - position: {x: 5.0193644, y: 0, z: 3.6073165}
+    density: 0.120708466
+    time: 0
+  material: {fileID: 2100000, guid: 626f63757a1524f6682315a2454b5e22, type: 2}
+  physicMaterial: {fileID: 0}
+  isCollisionTrigger: 0
+  safeZone: 0.5
+  isCollisionBaked: 0
+--- !u!4 &1080580546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080580544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.81, y: 0.08, z: -8.72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1096734736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6162653912031075927, guid: 8fd4f77a4b4379a4b9d1d9702f7e4d09,
@@ -4533,7 +4612,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
@@ -5204,7 +5283,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
@@ -6735,7 +6814,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
@@ -7586,7 +7665,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
@@ -8196,7 +8275,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 32
+  m_Resolution: 128
   m_UpdateFrequency: 0
   m_BoxSize: {x: 10, y: 10, z: 10}
   m_BoxOffset: {x: 0, y: 0, z: 0}
