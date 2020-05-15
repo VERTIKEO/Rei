@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Callbacks;
 
 [Serializable]
 public class GoopKey {
@@ -113,6 +114,17 @@ public class GoopBehavior : MonoBehaviour
             renderer.material.SetInt("_BallsCount", length);
 
             ac += length;
+        }
+    }
+
+    [PostProcessScene(0)]
+    public static void OnPostProcessScene() {
+        // clear and regenerate all colliders
+        GoopBehavior[] goops = FindObjectsOfType<GoopBehavior>();
+
+        for(int i = 0; i < goops.Length; i++) {
+            goops[i].ClearColliders();
+            goops[i].GenerateColliders();
         }
     }
 
