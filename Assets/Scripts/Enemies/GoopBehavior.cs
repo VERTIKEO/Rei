@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -157,8 +157,10 @@ public class GoopBehavior : MonoBehaviour
     }
 
     public void ClearColliders() {
-        foreach(GameObject child in _segmentsCount.Keys) {
-            DestroyImmediate(gameObject);
+        foreach(Transform child in this.transform.Cast<Transform>().ToList()) {
+            if(child.name == _SEGMENT_NAME) {
+                DestroyImmediate(child.gameObject);
+            }
         }
     }
 
