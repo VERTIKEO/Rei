@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d12c5b27507d74807bda01047c255475
+guid: f94c28f19e6f95c4a8b16da3a8691c7d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Color765547
-    second: {fileID: 2100000, guid: c798b49c1c43ed145a540377fb1eb679, type: 2}
+      name: White
+    second: {fileID: 2100000, guid: bb57bf409dd124441873fe39a32a6ef5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Color8D8EA7
-    second: {fileID: 2100000, guid: bb57bf409dd124441873fe39a32a6ef5, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: c798b49c1c43ed145a540377fb1eb679, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -54,7 +54,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -65,9 +65,9 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 12
-    secondaryUVHardAngle: 90
-    secondaryUVPackMargin: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
