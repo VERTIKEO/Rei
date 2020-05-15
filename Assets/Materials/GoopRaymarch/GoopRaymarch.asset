@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd6fe57257048db802c1c4c2b75248, type: 3}
+  m_Name: GoopRaymarch
+  m_EditorClassIdentifier: 
+  shaderName: GoopRaymarch
+  shaderReference: {fileID: 4800000, guid: 5c7b9a584eefd491eb1ec9abcb9553bd, type: 3}
+  shaderTemplate: uRaymarching/UniversalRP/Lit
+  variables:
+  - key: Name
+    value: GoopRaymarch
+  - key: ObjectShape
+    value: CUBE
+  - key: RaymarchingShaderDirectory
+    value: Assets/uRaymarching/Shaders/Include/UniversalRP
+  - key: RenderType
+    value: Opaque
+  - key: RenderQueue
+    value: Geometry
+  - key: LOD
+    value: 300
+  conditions:
+  - key: ShadowCaster
+    value: 0
+  - key: FullScreen
+    value: 0
+  - key: WorldSpace
+    value: 0
+  - key: FollowObjectScale
+    value: 0
+  - key: CameraInsideObject
+    value: 0
+  - key: UseRaymarchingDepth
+    value: 1
+  - key: FallbackToDiffuse
+    value: 1
+  - key: ObjectScale
+    value: 0
+  - key: CheckIfInsideObject
+    value: 1
+  - key: RayStopsAtDepthTexture
+    value: 0
+  - key: RayStartsFromDepthTexture
+    value: 0
+  blocks:
+  - key: Properties
+    value: "// \n_Smooth(\"Goopiness\", Range (0.5, 4.0)) = 2.0\n_Radius(\"Radius\",
+      Float) = 0.5\n\n// Metaballs\n// _Ball0(\"Ball 0\", Vector) = (0,0,0,0)\n//
+      _Ball1(\"Ball 1\", Vector) = (0,0,0,0)\n// _Ball2(\"Ball 2\", Vector) = (0,0,0,0)\n//
+      _Ball3(\"Ball 3\", Vector) = (0,0,0,0)\n// _Ball4(\"Ball 4\", Vector) = (0,0,0,0)\n//
+      _Ball5(\"Ball 5\", Vector) = (0,0,0,0)\n// _Ball6(\"Ball 6\", Vector) = (0,0,0,0)\n//
+      _Ball7(\"Ball 7\", Vector) = (0,0,0,0)\n\n// _Ball8(\"Ball 8\", Vector) = (0,0,0,0)\n//
+      _Ball9(\"Ball 9\", Vector) = (0,0,0,0)\n// _BallA(\"Ball 10\", Vector) = (0,0,0,0)\n//
+      _BallB(\"Ball 11\", Vector) = (0,0,0,0)\n// _BallC(\"Ball 12\", Vector) = (0,0,0,0)\n//
+      _BallD(\"Ball 13\", Vector) = (0,0,0,0)\n// _BallE(\"Ball 14\", Vector) = (0,0,0,0)\n//
+      _BallF(\"Ball 15\", Vector) = (0,0,0,0)"
+    folded: 1
+  - key: DistanceFunction
+    value: "half _Smooth;\nhalf _Radius;\n\nhalf4 _Balls[16];\nint _BallsCount;\n\ninline
+      float DistanceFunction(float3 pos)\n{\n    float r = Sphere(pos + _Balls[0].xyz,
+      _Balls[0].w);\n\n    for(uint i = 1; i < _BallsCount; i++) {\n        r = SmoothMin(r,
+      Sphere(pos + _Balls[i].xyz, _Balls[i].w), _Smooth);\n    }\n\n    return r;\n}"
+    folded: 1
+  - key: PostEffect
+    value: "inline void PostEffect(RaymarchInfo ray, inout PostEffectOutput o)\n{\n   
+      float ao = 1.0 - pow(1.0 * ray.loop / ray.maxLoop, 2);\n    o.occlusion = ao;\n}"
+    folded: 0
+  constants: {fileID: 11400000, guid: 3fc7bca6894034dec9dc046eade7d602, type: 2}
+  basicFolded: 1
+  conditionsFolded: 1
+  variablesFolded: 1
+  materialsFolded: 1
+  constantsFolded: 1
