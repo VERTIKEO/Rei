@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ public struct Ball {
         this.radius = key.density;
     }
 
-    Vector3 Animate(float delta) {
+    public Vector3 Animate(float delta) {
         // TODO: animate movement;
         return pos;
     }
@@ -82,8 +82,7 @@ public class GoopBehavior : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        SimulateMetaballs();
-        UpdateRenderer();
+        UpdateRenderer(Time.deltaTime);
     }
 
     public void Clear() {
@@ -91,7 +90,7 @@ public class GoopBehavior : MonoBehaviour
         // container.OnDestroy();
     }
 
-    void UpdateRenderer() {
+    void UpdateRenderer(float delta = 0) {
         int ac = 0;
 
         //Debug.Log("metaball count: " + _metaballs.Count);
@@ -110,6 +109,8 @@ public class GoopBehavior : MonoBehaviour
             for(int i = 0; i < length; i++) {
                 //Debug.Log("index: " + (ac + i));
                 Ball b = _metaballs[ac + i];
+
+                b.pos = b.Animate(delta);
                 balls[i] = new Vector4(b.pos.x, b.pos.y, b.pos.z, b.radius);
 
                 //Debug.Log("Ball: " + balls[i].ToString());
@@ -155,10 +156,6 @@ public class GoopBehavior : MonoBehaviour
     public bool isCollisionBaked;
     private List<Ball> _metaballs;
     private Dictionary<GameObject, int> _segmentsCount = new Dictionary<GameObject, int>();
-
-    void SimulateMetaballs() {
-
-    }
 
     /// Given a data structure of GoopKey instances, 
     void Populate() {
