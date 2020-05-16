@@ -93,27 +93,47 @@ public class GoopBehavior : MonoBehaviour
 
     void UpdateRenderer() {
         int ac = 0;
+
+        //Debug.Log("metaball count: " + _metaballs.Count);
+
+        // Iterate over all segments and add their balls to the respective renderer
         foreach(KeyValuePair<GameObject, int> segment in _segmentsCount) {
             Vector4[] balls = new Vector4[16];
             int length = Math.Min(16, segment.Value);
 
-            Debug.Log("Segment: " + segment.Key.transform.localPosition);
+            //Debug.Log("Segment: " + segment.Key.transform.localPosition);
 
             if(length < segment.Value) {
-                Debug.LogWarning("Segment has extra items over max count");
+                Debug.LogWarning("Segment has extra items over max count", segment.Key);
             }
 
             for(int i = 0; i < length; i++) {
+                //Debug.Log("index: " + (ac + i));
                 Ball b = _metaballs[ac + i];
                 balls[i] = new Vector4(b.pos.x, b.pos.y, b.pos.z, b.radius);
-                Debug.Log("Ball: " + balls[i].ToString());
+
+                //Debug.Log("Ball: " + balls[i].ToString());
             }
 
             MeshRenderer renderer = segment.Key.GetComponent<MeshRenderer>();
             renderer.material.SetVectorArray("_Balls", balls);
             renderer.material.SetInt("_BallsCount", length);
 
-            ac += length;
+            ac += segment.Value;
+        }
+    }
+
+    public void GenerateColliders() {
+        ClearColliders();
+        Populate();
+        UpdateRenderer();
+    }
+
+    public void ClearColliders() {
+        foreach(Transform child in this.transform.Cast<Transform>().ToList()) {
+            if(child.name == _SEGMENT_NAME) {
+                DestroyImmediate(child.gameObject);
+            }
         }
     }
 
@@ -146,6 +166,8 @@ public class GoopBehavior : MonoBehaviour
         System.Diagnostics.Stopwatch _t = new System.Diagnostics.Stopwatch();
         _t.Start();
 
+        _segmentsCount.Clear();
+
         _metaballs = new List<Ball>();
 
         for (int i = 0; i < path.Count - 1; i++) {
@@ -160,20 +182,6 @@ public class GoopBehavior : MonoBehaviour
 
         _t.Stop();
         Debug.Log("Generated " + _metaballs.Count + " metaballs in " + _t.ElapsedMilliseconds + "ms");
-    }
-
-    public void GenerateColliders() {
-        ClearColliders();
-        Populate();
-        UpdateRenderer();
-    }
-
-    public void ClearColliders() {
-        foreach(Transform child in this.transform.Cast<Transform>().ToList()) {
-            if(child.name == _SEGMENT_NAME) {
-                DestroyImmediate(child.gameObject);
-            }
-        }
     }
 
     // TODO: split in more functions
@@ -198,6 +206,7 @@ public class GoopBehavior : MonoBehaviour
             // add collider component
             BoxCollider box = segment.AddComponent<BoxCollider>();
             box.isTrigger = this.isCollisionTrigger;
+            // box.direction = 0;
             //box.size =    // TODO: subtract the safeZone from collider size
 
             // add mesh components
