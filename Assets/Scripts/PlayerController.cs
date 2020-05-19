@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 10;
 
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public float takenDamage;
+
     public List<string> inventory;
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -34,5 +40,15 @@ public class PlayerController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
       
         characterController.Move(moveDirection * speed * Time.deltaTime);
+
+        /*if (currentHealth <= 0f)
+        {
+            GameOver();
+        }*/
+    }
+
+    public void takeDamage()
+    {
+        currentHealth -= takenDamage;
     }
 }
