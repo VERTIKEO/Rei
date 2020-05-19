@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
 
     public float maxHealth = 100f;
     public float currentHealth;
-    public float takenDamage;
 
     public List<string> inventory;
     // Start is called before the first frame update
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
-    public void takeDamage()
+    public void takeDamage(float takenDamage)
     {
         currentHealth -= takenDamage;
     }
