@@ -44,7 +44,7 @@ public class DoorScript : MonoBehaviour
                 currentEulerAngles = new Vector3(0, Mathf.Lerp(doorOpenAngle, 0, time), 0);
 
                 //moving the value of the Vector3 into Quanternion.eulerAngle format
-                currentRotation.eulerAngles = currentEulerAngles;
+                currentRotation.eulerAngles = transform.rotation - currentEulerAngles;
 
                 //apply the Quaternion.eulerAngles change to the gameObject
                 transform.rotation = currentRotation;
