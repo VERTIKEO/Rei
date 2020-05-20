@@ -6,6 +6,7 @@ public class DoorScript : MonoBehaviour
 {
 
     public float doorOpenAngle = 90f;
+    private float doorOpen;
     public float openSpeed = 2f;
 
     public string keyItem;
@@ -26,7 +27,7 @@ public class DoorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        doorOpen = transform.parent.rotation.y + 1 * doorOpenAngle;
     }
 
     // Update is called once per frame
@@ -41,13 +42,15 @@ public class DoorScript : MonoBehaviour
 
 
                 //modifying the Vector3, based on input multiplied by speed and time
-                currentEulerAngles = new Vector3(0, Mathf.Lerp(doorOpenAngle, 0, time), 0);
+                currentEulerAngles = new Vector3(0, Mathf.Lerp(doorOpen, transform.parent.rotation.y * 180, time), 0);
 
                 //moving the value of the Vector3 into Quanternion.eulerAngle format
-                currentRotation.eulerAngles = transform.rotation - currentEulerAngles;
+                currentRotation.eulerAngles = currentEulerAngles;
 
                 //apply the Quaternion.eulerAngles change to the gameObject
-                transform.rotation = currentRotation;
+                transform.rotation =  currentRotation;
+
+                //transform.rotation = Quaternion.Euler(0, Mathf.Lerp(doorOpen, transform.rotation.y + 180, time), 0);
 
                 if (_timer <= 0)
                     open = true;

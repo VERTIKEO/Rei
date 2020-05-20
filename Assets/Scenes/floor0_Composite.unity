@@ -971,6 +971,7 @@ MonoBehaviour:
   door: {fileID: 130636723}
   playerThoughts: {fileID: 388943087}
   ghostGirl: {fileID: 0}
+  damage: 50
 --- !u!65 &88137599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7099,6 +7100,7 @@ MonoBehaviour:
   door: {fileID: 130636723}
   playerThoughts: {fileID: 388943087}
   ghostGirl: {fileID: 1210254958}
+  damage: 50
 --- !u!65 &682490836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12790,7 +12792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1329383111
 Transform:
   m_ObjectHideFlags: 0
@@ -12817,12 +12819,12 @@ Transform:
   - {fileID: 1958426925}
   - {fileID: 625524321}
   - {fileID: 2075930700}
-  - {fileID: 1433873664}
   - {fileID: 418348379}
   - {fileID: 1222567730}
   - {fileID: 416510054}
   - {fileID: 710653614}
   - {fileID: 566519083}
+  - {fileID: 1433873664}
   - {fileID: 217270825}
   - {fileID: 1889626096}
   - {fileID: 776927185}
@@ -20837,7 +20839,8 @@ MonoBehaviour:
   isTorsaker: 1
   door: {fileID: 130636723}
   playerThoughts: {fileID: 388943087}
-  ghostGirl: {fileID: 0}
+  ghostGirl: {fileID: 1210254958}
+  damage: 50
 --- !u!65 &2079380126
 BoxCollider:
   m_ObjectHideFlags: 0
