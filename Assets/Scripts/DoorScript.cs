@@ -27,7 +27,7 @@ public class DoorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        doorOpen = transform.parent.rotation.y + 1 * doorOpenAngle;
+        doorOpen =  -transform.parent.rotation.y * doorOpenAngle;
     }
 
     // Update is called once per frame
@@ -39,16 +39,17 @@ public class DoorScript : MonoBehaviour
             {
                 float time = _timer / openTime;
                 _timer -= Time.deltaTime;
-
+ 
 
                 //modifying the Vector3, based on input multiplied by speed and time
-                currentEulerAngles = new Vector3(0, Mathf.Lerp(doorOpen, transform.parent.rotation.y * 180, time), 0);
+                currentEulerAngles = new Vector3(0, Mathf.Lerp(doorOpen, 0, time), 0);
 
                 //moving the value of the Vector3 into Quanternion.eulerAngle format
-                currentRotation.eulerAngles = currentEulerAngles;
+                currentRotation.eulerAngles =  currentEulerAngles;
 
                 //apply the Quaternion.eulerAngles change to the gameObject
-                transform.rotation =  currentRotation;
+                transform.rotation = transform.parent.rotation * currentRotation;
+
 
                 //transform.rotation = Quaternion.Euler(0, Mathf.Lerp(doorOpen, transform.rotation.y + 180, time), 0);
 
@@ -73,10 +74,11 @@ public class DoorScript : MonoBehaviour
                 currentRotation.eulerAngles = currentEulerAngles;
 
                 //apply the Quaternion.eulerAngles change to the gameObject
-                transform.rotation = currentRotation;
+                transform.rotation = transform.parent.rotation * currentRotation;
 
                 if (_timer <= 0)
                     open = false;
+                closing = false;
 
             }
         }
@@ -94,6 +96,7 @@ public class DoorScript : MonoBehaviour
             {
                 locked = false;
                 playerInventory.inventory.Remove(keyItem);
+                if (_timer == 0)
                 _timer = openTime;
                 Debug.Log("Unlocked door and removed " + keyItem);
             }
@@ -103,6 +106,7 @@ public class DoorScript : MonoBehaviour
             }
             else
             {
+                if (_timer == 0)
                 _timer = openTime;
             }
 
@@ -114,6 +118,7 @@ public class DoorScript : MonoBehaviour
         if (open == true)
         {
             closing = true;
+            if (_timer == 0)
             _timer = openTime;
         }
 
