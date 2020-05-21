@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 4252705056894105800}
   - component: {fileID: 7509802805421786161}
   m_Layer: 0
-  m_Name: SM_Books
+  m_Name: Books
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5070949863846380286
 Transform:
