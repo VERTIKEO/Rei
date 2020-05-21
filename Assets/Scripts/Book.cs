@@ -35,16 +35,16 @@ public class Book : MonoBehaviour
 
             if (firstTimeRead == true)
             {
-                playerThoughts.SetActive(true);
-                thoughts.text = "What's such a nice book doing out in an abandoned house?";             //text here
+                /*playerThoughts.SetActive(true);
+                thoughts.text = "What's such a nice book doing out in an abandoned house?";*/             //text here
                 ghostGirl.SetActive(true);
                 doorScript = puzzleDoor.GetComponent<DoorScript>();
                 doorScript.CloseDoor();
                 //VN Script here
                 firstTimeRead = false;
             }
-            playerThoughts.SetActive(true);
-            thoughts.text = thought2;
+            /*playerThoughts.SetActive(true);
+            thoughts.text = thought2;*/
 
         }
     }
