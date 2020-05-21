@@ -56,14 +56,14 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 2048
+    m_BakeResolution: 32
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
-    m_Padding: 2
+    m_Padding: 8
     m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000,
       type: 0}
     m_LightmapsBakeMode: 1
@@ -5355,13 +5355,13 @@ Transform:
   m_Children:
   - {fileID: 1966530433}
   - {fileID: 1072370677}
+  - {fileID: 1951939765}
   - {fileID: 443455229}
   - {fileID: 1889153039}
   - {fileID: 729611475}
   - {fileID: 993911803}
   - {fileID: 335098504}
   - {fileID: 1420180976}
-  - {fileID: 1951939765}
   - {fileID: 2092528789}
   - {fileID: 2049836282}
   - {fileID: 298675994}
@@ -8790,8 +8790,8 @@ Transform:
   - {fileID: 1880649348}
   - {fileID: 1719210202}
   - {fileID: 1751360623}
-  - {fileID: 1412340282}
   - {fileID: 451539671}
+  - {fileID: 1412340282}
   - {fileID: 827025445}
   m_Father: {fileID: 1823834069}
   m_RootOrder: 5
@@ -18540,7 +18540,7 @@ Transform:
   m_Children:
   - {fileID: 1620062050}
   m_Father: {fileID: 587222102}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1957310579
 PrefabInstance:
