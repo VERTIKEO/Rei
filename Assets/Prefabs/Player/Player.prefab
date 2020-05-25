@@ -141,6 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravity: 1
+  maxHealth: 100
+  currentHealth: 0
   inventory: []
 --- !u!136 &-2193655549332354219
 CapsuleCollider:
@@ -189,7 +191,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4fa3c34bb106f944f98b2234da549788,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8149274
+      value: 0.725
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4fa3c34bb106f944f98b2234da549788,
         type: 3}
