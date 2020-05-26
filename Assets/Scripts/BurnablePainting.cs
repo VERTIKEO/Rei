@@ -15,6 +15,8 @@ public class BurnablePainting : MonoBehaviour
     TextMesh thoughts;
     DoorScript doorScript;
     PlayerController playerController;
+
+    public float damage = 50f;
     
     // Start is called before the first frame update
     void Start()
@@ -37,15 +39,16 @@ public class BurnablePainting : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains(candle) && isTorsaker == true)
             {
-                playerThoughts.SetActive(true);
-                thoughts.text = "" + rightBurn;
+                /*playerThoughts.SetActive(true);
+                thoughts.text = "" + rightBurn;*/
                 doorScript.locked = false;
                 ghostGirl.SetActive(false);
                 gameObject.SetActive(false);
             }
             if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains("Candle"))
             {
-                thoughts.text = "" + wrongBurn;
+                //thoughts.text = "" + wrongBurn;
+                playerController.takeDamage(damage);
                 gameObject.SetActive(false);
             }
         }

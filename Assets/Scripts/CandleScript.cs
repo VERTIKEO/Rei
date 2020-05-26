@@ -28,8 +28,8 @@ public class CandleScript : MonoBehaviour
 
                 PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
                 playerController.inventory.Add(gameObject.name);
-                playerThoughts.SetActive(true);
-                thoughts.text = "Picked up " + gameObject.name;
+                /*playerThoughts.SetActive(true);
+                thoughts.text = "Picked up " + gameObject.name;*/
                 gameObject.SetActive(false);
             }
         }

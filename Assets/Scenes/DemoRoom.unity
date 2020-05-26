@@ -10714,6 +10714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7447863910618317395, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
         type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447863910618317395, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
