@@ -12,6 +12,21 @@ ModelImporter:
   - first:
       74: 2667949614841947897
     second: Walk
+  - first:
+      74: 7210734351622154706
+    second: Take 002
+  - first:
+      74: -3078392223429531516
+    second: Idle_Start
+  - first:
+      74: 2249916699969751699
+    second: Idle_End
+  - first:
+      74: -6775884027671718737
+    second: Idle1
+  - first:
+      74: 1827226128182048838
+    second: Take 001
   externalObjects:
   - first:
       type: UnityEngine:Material
