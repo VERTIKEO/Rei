@@ -11,6 +11,8 @@ public class DoorScript : MonoBehaviour
     public float openSpeed = 2f;
     public float playerSpeed = 1.0f;
     public float movementTime = 2f;
+    public float rotate = 1f;
+
     public string keyItem;
 
     bool open = false;
@@ -23,19 +25,17 @@ public class DoorScript : MonoBehaviour
 
     PlayerController playerInventory;
     GameObject player;
-    GameObject turnPoint;
     Transform target;
 
     Vector3 currentEulerAngles;
     Quaternion currentRotation;
+
 
     // Start is called before the first frame update
     void Start()
     {
         doorOpen =  -transform.parent.rotation.y * doorOpenAngle;
         player = GameObject.Find("Player");
-        turnPoint = GameObject.Find("LookPoint");
-        target = turnPoint.transform;
     }
 
     // Update is called once per frame
@@ -83,7 +83,9 @@ public class DoorScript : MonoBehaviour
                 //apply the Quaternion.eulerAngles change to the gameObject
                 transform.rotation = transform.parent.rotation * currentRotation;
                 playerInventory.enabled = false;
-                player.transform.LookAt(target);
+                Vector3 rotationVector = player.transform.position - transform.parent.position;
+                Quaternion rotation = Quaternion.Euler(rotationVector);
+                player.transform.rotation = rotation;
                 if (_timer <= 0.5 && _timer >= 0)
                 player.transform.position += player.transform.forward * playerSpeed * Time.deltaTime;
                 //transform.rotation = Quaternion.Euler(0, Mathf.Lerp(doorOpen, transform.rotation.y + 180, time), 0);
