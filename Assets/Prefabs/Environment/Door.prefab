@@ -141,9 +141,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpenAngle: 90
   openSpeed: 2
+  playerSpeed: 5
+  movementTime: 2
   keyItem: 
   locked: 0
   openTime: 1
+  turnPoint: {fileID: 0}
 --- !u!65 &2111728766355218342
 BoxCollider:
   m_ObjectHideFlags: 0
