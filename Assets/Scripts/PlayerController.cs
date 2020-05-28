@@ -69,6 +69,16 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
+    public void SetEnable()
+    {
+        this.enabled = true;
+    }
+
+    public void SetDisable()
+    {
+        this.enabled = false;
+    }
+
     public void takeDamage(float takenDamage)
     {
         currentHealth -= takenDamage;
