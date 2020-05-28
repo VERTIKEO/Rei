@@ -33,12 +33,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
         {
             float angle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+            angle += Camera.main.transform.rotation.eulerAngles.y;  // calculate angle relative to camera
+            
             transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
 
-        moveDirection.y -= gravity * Time.deltaTime;
+        // SimpleMove automatically applies gravity
+        Vector3 forward = movementButtons ? transform.TransformDirection(Vector3.forward) : Vector3.zero;
+        characterController.SimpleMove(forward * speed);
       
-        characterController.Move(moveDirection * speed * Time.deltaTime);
+        // Apply animations
 
         /*if (currentHealth <= 0f)
         {
