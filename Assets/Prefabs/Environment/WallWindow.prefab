@@ -173,4 +173,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.0000002, y: 3, z: 0.3}
-  m_Center: {x: -1.4999999, y: 1.4973714, z: 0.41181538}
+  m_Center: {x: -1.4999999, y: 1.4973714, z: 0}
