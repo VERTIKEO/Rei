@@ -6,39 +6,62 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
+    Animator animator;
+
+    [Header("Animations")]
+    public float animationSpeed = 0.5f;
+
+    [Header("Movement")]
+    [SerializeField] private Vector3 moveDirection = Vector3.zero;
     public float speed = 5.0f;
-    private Vector3 moveDirection = Vector3.zero;
     public float gravity = 10;
 
+    [Header("Health")]
     public float maxHealth = 100f;
     public float currentHealth;
 
+    [Header("Inventory")]
     public List<string> inventory;
-    // Start is called before the first frame update
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //moveDirection = Vector3.zero;   // reset movement vector
+        bool movementButtons = Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f;
+
         if (characterController.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical")).normalized;
+            moveDirection = movementButtons ? new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")).normalized : Vector3.zero;
         }
 
-        if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
+        if (movementButtons)
         {
             float angle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+            angle += Camera.main.transform.rotation.eulerAngles.y;  // calculate angle relative to camera
+            
             transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
 
-        moveDirection.y -= gravity * Time.deltaTime;
+        // SimpleMove automatically applies gravity
+        Vector3 forward = movementButtons ? transform.TransformDirection(Vector3.forward) : Vector3.zero;
+        characterController.SimpleMove(forward * speed);
       
-        characterController.Move(moveDirection * speed * Time.deltaTime);
+        // Apply animations
+        if(movementButtons) {
+            // set walking animation
+            animator.SetBool("isWalking", true);
+            animator.speed = animationSpeed * speed;
+        } else {
+            // set idle animation
+            animator.SetBool("isWalking", false);
+            animator.speed = 1;
+        }
 
         /*if (currentHealth <= 0f)
         {
