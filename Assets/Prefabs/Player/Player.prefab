@@ -158,7 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329129f2d10ff36408f9f4c1beb7276b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  animationSpeed: 0.8
+  moveDirection: {x: 0, y: 0, z: 0}
+  speed: 4
   gravity: 1
   maxHealth: 100
   currentHealth: 0
