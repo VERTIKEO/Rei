@@ -9,16 +9,14 @@ public class Book : MonoBehaviour
     public bool puzzleStarted = false;
     public GameObject ghostGirl;
     public GameObject puzzleDoor;
-    public GameObject playerThoughts;
-    TextMesh thoughts;
     DoorScript doorScript;
-
+    public GameObject bookText;
     bool firstTimeRead = true;
     
     // Start is called before the first frame update
     void Start()
     {
-        thoughts = playerThoughts.GetComponent<TextMesh>();
+        bookText = GameObject.Find("BookFlowchart");
     }
 
     // Update is called once per frame
@@ -36,17 +34,16 @@ public class Book : MonoBehaviour
 
             if (firstTimeRead == true)
             {
-                /*playerThoughts.SetActive(true);
-                thoughts.text = "What's such a nice book doing out in an abandoned house?";*/             //text here
                 ghostGirl.SetActive(true);
                 doorScript = puzzleDoor.GetComponent<DoorScript>();
                 doorScript.CloseDoor();
+                bookText.SendMessage("First Read");
                 puzzleStarted = true;
-                //VN Script here
+
                 firstTimeRead = false;
             }
-            /*playerThoughts.SetActive(true);
-            thoughts.text = thought2;*/
+            else
+            bookText.SendMessage("Read");
 
         }
     }
