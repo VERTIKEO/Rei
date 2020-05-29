@@ -4585,7 +4585,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 410816710}
   selectedCommands: []
   variables: []
   description: 
@@ -4657,7 +4658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 350
+    x: 352
     y: 87
     width: 120
     height: 40
@@ -5527,6 +5528,17 @@ GameObject:
   - component: {fileID: 472799239}
   - component: {fileID: 472799238}
   - component: {fileID: 472799237}
+  - component: {fileID: 472799249}
+  - component: {fileID: 472799248}
+  - component: {fileID: 472799247}
+  - component: {fileID: 472799246}
+  - component: {fileID: 472799245}
+  - component: {fileID: 472799244}
+  - component: {fileID: 472799243}
+  - component: {fileID: 472799242}
+  - component: {fileID: 472799252}
+  - component: {fileID: 472799251}
+  - component: {fileID: 472799250}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -5730,10 +5742,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: I should have a look around... Maybe the police missed something.
+  storyText: '"I should have a look around... Maybe the police missed something."'
   description: 
   character: {fileID: 1173061882}
-  portrait: {fileID: 21300000, guid: b244be230093cba47821ed7176acef48, type: 3}
+  portrait: {fileID: 21300000, guid: e17c3a4c31590e84f80b9013de8ac0d4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5838,7 +5850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 12, y: -38}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -5850,9 +5862,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 472799241}
-  selectedCommands:
-  - {fileID: 472799237}
+  - {fileID: 472799244}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -5892,11 +5903,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: It's so cold... The electricity is shut off. Figures, nobody has lived
-    here for over two years after all.
+  storyText: '"It''s so cold... The electricity is shut off. Figures, nobody has
+    lived here for over two years after all."'
   description: 
   character: {fileID: 1173061882}
-  portrait: {fileID: 21300000, guid: b244be230093cba47821ed7176acef48, type: 3}
+  portrait: {fileID: 21300000, guid: e17c3a4c31590e84f80b9013de8ac0d4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5923,7 +5934,7 @@ MonoBehaviour:
   storyText: "\u201CSo this is the Wagner Mansion\""
   description: 
   character: {fileID: 1173061882}
-  portrait: {fileID: 21300000, guid: b244be230093cba47821ed7176acef48, type: 3}
+  portrait: {fileID: 21300000, guid: e17c3a4c31590e84f80b9013de8ac0d4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6021,7 +6032,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &472799237
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6049,7 +6060,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &472799238
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6077,7 +6088,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &472799239
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6106,7 +6117,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &472799240
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6121,7 +6132,7 @@ MonoBehaviour:
   message: PickedUpKey
 --- !u!114 &472799241
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6148,6 +6159,262 @@ MonoBehaviour:
   - {fileID: 472799239}
   - {fileID: 472799237}
   suppressAllAutoSelections: 0
+--- !u!114 &472799242
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1757772386}
+  targetComponentAssemblyName: CandleScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CandleScript
+  targetMethod: PickUp
+  targetMethodText: 'PickUp (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &472799243
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  text: No
+  description: 
+  targetBlock: {fileID: 472799244}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &472799244
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 251
+    y: 217
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 25
+  blockName: No
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 472799250}
+  suppressAllAutoSelections: 0
+--- !u!114 &472799245
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 110
+    y: 220
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 24
+  blockName: Yes
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 472799242}
+  - {fileID: 472799251}
+  suppressAllAutoSelections: 0
+--- !u!114 &472799246
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  text: Yes
+  description: 
+  targetBlock: {fileID: 472799245}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &472799247
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  storyText: Grab a candle?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &472799248
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 472799249}
+  suppressBlockAutoSelect: 0
+  message: CandlePickup
+--- !u!114 &472799249
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 182
+    y: 160
+    width: 132
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 21
+  blockName: Candle Pickup
+  description: 
+  eventHandler: {fileID: 472799248}
+  commandList:
+  - {fileID: 472799252}
+  - {fileID: 472799247}
+  - {fileID: 472799246}
+  - {fileID: 472799243}
+  suppressAllAutoSelections: 0
+--- !u!114 &472799250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &472799251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &472799252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472799218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetDisable
+  delay: 0
 --- !u!1001 &475316501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8157,7 +8424,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657482137}
-  m_LocalRotation: {x: 0.17737776, y: 0.000000043524302, z: 0.000000018610919, w: -0.98414284}
+  m_LocalRotation: {x: 0.17737779, y: 0.000000015134253, z: 0.000000013493639, w: -0.98414284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9218,9 +9485,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 756638547}
+  - {fileID: 756638552}
   selectedCommands:
-  - {fileID: 756638550}
+  - {fileID: 756638557}
   variables:
   - {fileID: 756638543}
   - {fileID: 756638542}
@@ -9623,7 +9890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 1
-  storyText: "I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!"
+  storyText: "\"I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: a9a2f726a2c10f74f91148491c6fcdd1, type: 3}
@@ -9650,7 +9917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 1
-  storyText: "H-Huh? I don\u2019t.. Feel.. so good\u2026"
+  storyText: "\"H-Huh? I don\u2019t.. Feel.. so good\u2026\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 07bfb8dde62e623479e16ccbd143f62d, type: 3}
@@ -10136,7 +10403,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &756638578
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10156,7 +10423,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &756638579
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10176,7 +10443,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &756638580
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10193,7 +10460,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: dd04c7ac7ce3ab8419bab9d140237485, type: 3}
 --- !u!114 &756638581
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12780,7 +13047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 1
-  storyText: "I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!"
+  storyText: "\"I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: a9a2f726a2c10f74f91148491c6fcdd1, type: 3}
@@ -12807,7 +13074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 40
   indentLevel: 1
-  storyText: "H-Huh? I don\u2019t.. Feel.. so good\u2026"
+  storyText: "\"H-Huh? I don\u2019t.. Feel.. so good\u2026\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 07bfb8dde62e623479e16ccbd143f62d, type: 3}
@@ -13055,7 +13322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 1
-  storyText: "....It\u2019s gone."
+  storyText: "\"....It\u2019s gone.\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 0}
@@ -13282,7 +13549,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 969764324}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 969764298}
   variables:
   - {fileID: 969764314}
   - {fileID: 969764312}
@@ -13311,7 +13579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 1
-  storyText: ... Wagner.
+  storyText: '"... Wagner."'
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 0}
@@ -13338,7 +13606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 1
-  storyText: There's something written on the wall behind the painting...
+  storyText: '"There''s something written on the wall behind the painting..."'
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 0}
@@ -13528,7 +13796,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &969764327
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -17416,7 +17684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1570476015}
+  selectedFlowchart: {fileID: 472799230}
 --- !u!4 &1323172450
 Transform:
   m_ObjectHideFlags: 1
@@ -20293,7 +20561,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1570476017}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1570476044}
   variables:
   - {fileID: 1570476024}
   - {fileID: 1570476029}
@@ -23306,6 +23575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!135 &1757772388
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25195,7 +25465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 289
+    x: 291
     y: 120
     width: 120
     height: 40
@@ -25409,7 +25679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 1
-  storyText: "I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!"
+  storyText: "\"I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: a9a2f726a2c10f74f91148491c6fcdd1, type: 3}
@@ -25436,7 +25706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 40
   indentLevel: 1
-  storyText: "H-Huh? I don\u2019t.. Feel.. so good\u2026"
+  storyText: "\"H-Huh? I don\u2019t.. Feel.. so good\u2026\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 07bfb8dde62e623479e16ccbd143f62d, type: 3}
@@ -25867,7 +26137,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1900938349}
   selectedCommands:
-  - {fileID: 1900938359}
+  - {fileID: 1900938358}
   variables:
   - {fileID: 1900938373}
   - {fileID: 1900938371}
@@ -28038,7 +28308,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2055040488}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2055040461}
   variables:
   - {fileID: 2055040456}
   - {fileID: 2055040455}
@@ -28188,7 +28459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 42
   indentLevel: 1
-  storyText: "I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!"
+  storyText: "\"I-It\u2019s\u2026 so\u2026 h-hot- I- Aa-gh..!\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: a9a2f726a2c10f74f91148491c6fcdd1, type: 3}
@@ -28215,7 +28486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 1
-  storyText: "H-Huh? I don\u2019t.. Feel.. so good\u2026"
+  storyText: "\"H-Huh? I don\u2019t.. Feel.. so good\u2026\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 07bfb8dde62e623479e16ccbd143f62d, type: 3}
@@ -28377,8 +28648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 34
   indentLevel: 1
-  storyText: Something was wrong with her face. If I found a way to return it to
-    normal, perhaps I could help her. Then she might tell me where the kids went.
+  storyText: '"Something was wrong with her face. If I found a way to return it to
+    normal, perhaps I could help her. Then she might tell me where the kids went."'
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 4a0325d64cadaac4b85f9ec5bbbff41d, type: 3}
@@ -28592,8 +28863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: "That girl, she wasn\u2019t one of the lost kids. Is she the one haunting
-    this building? I felt a terrible anger radiating from her, but also ...fear?"
+  storyText: "\"That girl, she wasn\u2019t one of the lost kids. Is she the one haunting
+    this building? I felt a terrible anger radiating from her, but also ...fear?\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: d2b573497ed44fd4aa5fff36a8961eb2, type: 3}
@@ -28620,7 +28891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 32
   indentLevel: 1
-  storyText: "....It\u2019s gone."
+  storyText: "\"....It\u2019s gone.\""
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 07bfb8dde62e623479e16ccbd143f62d, type: 3}
@@ -28737,7 +29008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 1
-  storyText: ... Wagner.
+  storyText: '"... Wagner."'
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: 4a0325d64cadaac4b85f9ec5bbbff41d, type: 3}
@@ -28764,7 +29035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 1
-  storyText: There's something written on the wall behind the painting...
+  storyText: '"There''s something written on the wall behind the painting..."'
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: d2b573497ed44fd4aa5fff36a8961eb2, type: 3}
@@ -29539,7 +29810,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065310477}
-  m_LocalRotation: {x: 0.30251253, y: -0.000000007979995, z: 0.0000000025317966, w: 0.95314544}
+  m_LocalRotation: {x: 0.30251253, y: -0.000000007979978, z: 0.0000000025317468, w: 0.95314544}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
