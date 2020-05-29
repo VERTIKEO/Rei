@@ -2358,8 +2358,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204545614}
-  m_LocalRotation: {x: 0.17737776, y: -0.000000017239639, z: -0.0000000031073983,
-    w: -0.98414284}
+  m_LocalRotation: {x: 0.1773778, y: 0.000000043828656, z: 0.000000007900203, w: -0.98414284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4096,7 +4095,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -100.01001}
-  m_SizeDelta: {x: 250, y: 200.02002}
+  m_SizeDelta: {x: 350, y: 200.02002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345224436
 MonoBehaviour:
@@ -4111,7 +4110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7309113, g: 0.051886797, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5209,7 +5208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &460434602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21056,7 +21055,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1570476063}
   selectedCommands:
-  - {fileID: 1570476031}
+  - {fileID: 1570476061}
   variables:
   - {fileID: 1570476024}
   - {fileID: 1570476029}
@@ -21588,7 +21587,7 @@ MonoBehaviour:
     colorVal: {r: 1, g: 1, b: 1, a: 1}
   targetAlpha:
     floatRef: {fileID: 0}
-    floatVal: 0.7
+    floatVal: 0.85
 --- !u!114 &1570476038
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -22129,8 +22128,8 @@ MonoBehaviour:
   eventHandler: {fileID: 1570476057}
   commandList:
   - {fileID: 1570476056}
-  - {fileID: 1570476055}
   - {fileID: 1570476059}
+  - {fileID: 1570476055}
   - {fileID: 1570476036}
   - {fileID: 1570476022}
   suppressAllAutoSelections: 0
@@ -22248,7 +22247,7 @@ MonoBehaviour:
     colorVal: {r: 1, g: 1, b: 1, a: 1}
   targetAlpha:
     floatRef: {fileID: 0}
-    floatVal: 0.7
+    floatVal: 0.85
 --- !u!114 &1570476062
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -22281,7 +22280,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 147
-    y: 96
+    y: 95
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -22875,7 +22874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1613250460
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -31109,7 +31108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065310477}
-  m_LocalRotation: {x: 0.30251253, y: 0.000000024820615, z: -0.000000007878341, w: 0.95314544}
+  m_LocalRotation: {x: 0.30251253, y: 0.000000024820618, z: -0.0000000078783495, w: 0.95314544}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
