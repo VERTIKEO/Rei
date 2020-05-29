@@ -5,7 +5,6 @@ using UnityEngine;
 public class CandleScript : MonoBehaviour
 {
     Book bookScript;
-    GameObject intro;
     public GameObject book;
     public PlayerController playerController;
     public GameObject candlePickup;
@@ -16,7 +15,7 @@ public class CandleScript : MonoBehaviour
         bookScript = book.GetComponent<Book>();
         GameObject player = GameObject.Find("Player");
         playerController = player.gameObject.GetComponent<PlayerController>();
-        intro = GameObject.Find("Intro");
+        candlePickup = GameObject.Find("CandleFlowchart");
     }
 
     private void OnTriggerStay(Collider other)
