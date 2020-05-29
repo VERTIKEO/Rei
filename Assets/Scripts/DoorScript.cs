@@ -26,6 +26,7 @@ public class DoorScript : MonoBehaviour
     PlayerController playerInventory;
     GameObject player;
     Transform target;
+    Animator playerAnimator;
 
     Vector3 currentEulerAngles;
     Quaternion currentRotation;
@@ -36,6 +37,7 @@ public class DoorScript : MonoBehaviour
     {
         doorOpen =  -transform.parent.rotation.y * doorOpenAngle;
         player = GameObject.Find("Player");
+        playerAnimator = player.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -87,13 +89,16 @@ public class DoorScript : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(rotationVector);
                 player.transform.rotation = rotation;
                 if (_timer <= 0.5 && _timer >= 0)
-                player.transform.position += player.transform.forward * playerSpeed * Time.deltaTime;
+                player.transform.position += player.transform.forward * playerInventory.speed * Time.deltaTime; 
+                playerAnimator.SetBool("isWalking", true);
+                playerAnimator.speed = playerInventory.animationSpeed * playerInventory.speed;
                 //transform.rotation = Quaternion.Euler(0, Mathf.Lerp(doorOpen, transform.rotation.y + 180, time), 0);
 
                 if (_timer <= 0)
                 {
                     open = true;
                     playerInventory.enabled = true;
+                    playerAnimator.SetBool("isWalking", false);
                 }
 
             }
