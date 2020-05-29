@@ -6943,12 +6943,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2055141979}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &642878071 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5838768606435717184, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2055141979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &652017452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19341,36 +19335,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1804745834}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1809958166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1809958167}
-  m_Layer: 0
-  m_Name: TrackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1809958167
+--- !u!4 &1809958167 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6876717597536583932, guid: 501b4eb76fe1b2348b6ecd2bc109bac1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2055141979}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809958166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 642878071}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1820116894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19551,9 +19521,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1126115358}
   - {fileID: 790262288}
   - {fileID: 843216581}
-  - {fileID: 1126115358}
   - {fileID: 612392302}
   - {fileID: 1842632036}
   - {fileID: 363308262}
