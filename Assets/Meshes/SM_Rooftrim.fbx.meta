@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 633dc13d1bd83384ea4dff99bde2493e
+guid: a44eb53f8da469c4f8a4f91215e9dfcc
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color332A4C
+    second: {fileID: 2100000, guid: efbd7e926ab71a849b2607bcc82cc706, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -54,8 +59,8 @@ ModelImporter:
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 5
-    secondaryUVAreaDistortion: 10
+    secondaryUVAngleDistortion: 2
+    secondaryUVAreaDistortion: 5
     secondaryUVHardAngle: 80
     secondaryUVPackMargin: 8
     useFileScale: 1

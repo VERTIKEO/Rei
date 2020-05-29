@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fa3c34bb106f944f98b2234da549788
+guid: 5811818997f288245a6f8b33a92de829
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,33 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Accessories
-    second: {fileID: 2100000, guid: b8f74559b99bd4444a41f121e37b1e57, type: 2}
+      name: Color332A4C
+    second: {fileID: 2100000, guid: efbd7e926ab71a849b2607bcc82cc706, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dark
-    second: {fileID: 2100000, guid: b8f74559b99bd4444a41f121e37b1e57, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shirt
-    second: {fileID: 2100000, guid: 642d9d23662030a4887ab3b618b95ed2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Skin
-    second: {fileID: 2100000, guid: 3009462ed4ba7f346b5815544d4e2d3b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: 470c9e49c096e0b4a906e0e607d5d8e1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 3009462ed4ba7f346b5815544d4e2d3b, type: 2}
+      name: Color444667
+    second: {fileID: 2100000, guid: 6afbae801d609204683e09f48537b515, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -74,7 +54,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -84,10 +64,10 @@ ModelImporter:
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 2
+    secondaryUVAreaDistortion: 5
+    secondaryUVHardAngle: 80
+    secondaryUVPackMargin: 8
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
