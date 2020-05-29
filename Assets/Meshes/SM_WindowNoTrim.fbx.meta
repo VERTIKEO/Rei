@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d702aeceb2617c499a6e4103f82ef80
+guid: 00e07fe976ff0f048a49862a1a36ea02
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,28 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Accessories
-    second: {fileID: 2100000, guid: c149fb9d7b270dd41bf62c5663c8a400, type: 2}
+      name: Color332A4C
+    second: {fileID: 2100000, guid: efbd7e926ab71a849b2607bcc82cc706, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Skin
-    second: {fileID: 2100000, guid: bad7a8e09bfb12844b476c0bae35e31a, type: 2}
+      name: Color444667
+    second: {fileID: 2100000, guid: 6afbae801d609204683e09f48537b515, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: White
-    second: {fileID: 2100000, guid: 69bdf67b59822d94e845bde4dd3ff062, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: blinn6
-    second: {fileID: 2100000, guid: c149fb9d7b270dd41bf62c5663c8a400, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: blinn7
-    second: {fileID: 2100000, guid: 138620919b013cf4c8eabd310a9ae2b8, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 8984297520f991a48a38e67413a870de, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -69,7 +59,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -79,10 +69,10 @@ ModelImporter:
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 2
+    secondaryUVAreaDistortion: 5
+    secondaryUVHardAngle: 80
+    secondaryUVPackMargin: 8
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
