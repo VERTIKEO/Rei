@@ -104,30 +104,6 @@ public class DoorScript : MonoBehaviour
             }
         }
 
-        if (closing == true)
-        {
-            if (_timer > 0)
-            {
-                float time = _timer / openTime;
-                _timer -= Time.deltaTime;
-
-
-                //modifying the Vector3, based on input multiplied by speed and time
-                currentEulerAngles = new Vector3(0, Mathf.Lerp(180, 0, time), 0);
-
-                //moving the value of the Vector3 into Quanternion.eulerAngle format
-                currentRotation.eulerAngles = currentEulerAngles;
-
-                //apply the Quaternion.eulerAngles change to the gameObject
-                transform.rotation = transform.parent.rotation * currentRotation;
-
-                if (_timer <= 0)
-                    open = false;
-                closing = false;
-
-            }
-        }
-
 
     }
 
@@ -151,13 +127,8 @@ public class DoorScript : MonoBehaviour
 
     public void CloseDoor()
     {
-        if (open == true)
-        {
-            closing = true;
-            if (_timer == 0)
-            _timer = openTime;
-        }
-
+        gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+            open = false;
     }
 
     public void Lock()

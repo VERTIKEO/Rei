@@ -803,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &75932789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2343,9 +2343,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204545614}
-  m_LocalRotation: {x: 0.17737776, y: -0.000000017239639, z: -0.0000000031073983,
-    w: -0.98414284}
-  m_LocalPosition: {x: 0.00000021134079, y: 0.38007906, z: -5.4999948}
+  m_LocalRotation: {x: 0.17737782, y: 0.00000004981398, z: 0.000000008979062, w: -0.98414284}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 903745951}
@@ -4078,10 +4077,10 @@ RectTransform:
   m_Father: {fileID: 343060790}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -63.6}
-  m_SizeDelta: {x: 199, y: 200.02002}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -100.01001}
+  m_SizeDelta: {x: 250, y: 200.02002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345224436
 MonoBehaviour:
@@ -5572,17 +5571,6 @@ GameObject:
   - component: {fileID: 472799239}
   - component: {fileID: 472799238}
   - component: {fileID: 472799237}
-  - component: {fileID: 472799249}
-  - component: {fileID: 472799248}
-  - component: {fileID: 472799247}
-  - component: {fileID: 472799246}
-  - component: {fileID: 472799245}
-  - component: {fileID: 472799244}
-  - component: {fileID: 472799243}
-  - component: {fileID: 472799242}
-  - component: {fileID: 472799252}
-  - component: {fileID: 472799251}
-  - component: {fileID: 472799250}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -5905,8 +5893,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 472799241}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -6203,262 +6190,6 @@ MonoBehaviour:
   - {fileID: 472799239}
   - {fileID: 472799237}
   suppressAllAutoSelections: 0
---- !u!114 &472799242
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 27
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1757772386}
-  targetComponentAssemblyName: CandleScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: CandleScript
-  targetMethod: PickUp
-  targetMethodText: 'PickUp (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &472799243
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 26
-  indentLevel: 0
-  text: No
-  description: 
-  targetBlock: {fileID: 472799244}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &472799244
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 251
-    y: 217
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 25
-  blockName: No
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 472799250}
-  suppressAllAutoSelections: 0
---- !u!114 &472799245
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 110
-    y: 220
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 24
-  blockName: Yes
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 472799242}
-  - {fileID: 472799251}
-  suppressAllAutoSelections: 0
---- !u!114 &472799246
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 23
-  indentLevel: 0
-  text: Yes
-  description: 
-  targetBlock: {fileID: 472799245}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &472799247
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 22
-  indentLevel: 0
-  storyText: Grab a candle?
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &472799248
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 472799249}
-  suppressBlockAutoSelect: 0
-  message: CandlePickup
---- !u!114 &472799249
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 182
-    y: 160
-    width: 132
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 21
-  blockName: Candle Pickup
-  description: 
-  eventHandler: {fileID: 472799248}
-  commandList:
-  - {fileID: 472799252}
-  - {fileID: 472799247}
-  - {fileID: 472799246}
-  - {fileID: 472799243}
-  suppressAllAutoSelections: 0
---- !u!114 &472799250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 642878070}
-  methodName: SetEnable
-  delay: 0
---- !u!114 &472799251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 29
-  indentLevel: 0
-  targetObject: {fileID: 642878070}
-  methodName: SetEnable
-  delay: 0
---- !u!114 &472799252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 28
-  indentLevel: 0
-  targetObject: {fileID: 642878070}
-  methodName: SetDisable
-  delay: 0
 --- !u!1001 &475316501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8468,7 +8199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657482137}
-  m_LocalRotation: {x: 0.17737776, y: 0.00000004352433, z: 0.00000001861107, w: -0.98414284}
+  m_LocalRotation: {x: 0.17737782, y: -0.00000006515742, z: -9.788557e-10, w: -0.98414284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16612,6 +16343,388 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1235191290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1240385649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240385654}
+  - component: {fileID: 1240385650}
+  - component: {fileID: 1240385664}
+  - component: {fileID: 1240385663}
+  - component: {fileID: 1240385662}
+  - component: {fileID: 1240385661}
+  - component: {fileID: 1240385660}
+  - component: {fileID: 1240385659}
+  - component: {fileID: 1240385658}
+  - component: {fileID: 1240385657}
+  - component: {fileID: 1240385652}
+  - component: {fileID: 1240385651}
+  - component: {fileID: 1240385656}
+  - component: {fileID: 1240385655}
+  - component: {fileID: 1240385653}
+  m_Layer: 0
+  m_Name: Flowchart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1240385650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks:
+  - {fileID: 1240385652}
+  selectedCommands:
+  - {fileID: 1240385651}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &1240385651
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &1240385652
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 193
+    y: 123
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 25
+  blockName: No (Copy)
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1240385651}
+  - {fileID: 1240385653}
+  suppressAllAutoSelections: 0
+--- !u!114 &1240385653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1613250459}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!4 &1240385654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.694, y: -1.3757, z: -3.663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1269887115}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240385655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1613250459}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1240385656
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1240385664}
+  suppressBlockAutoSelect: 0
+--- !u!114 &1240385657
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &1240385658
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1364953459}
+  targetComponentAssemblyName: UnityEngine.MeshRenderer, UnityEngine.CoreModule,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MeshRenderer
+  targetMethod: 
+  targetMethodText: 
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1240385659
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 52
+    y: 126
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 24
+  blockName: Yes (Copy)
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1240385658}
+  - {fileID: 1240385657}
+  - {fileID: 1240385655}
+  suppressAllAutoSelections: 0
+--- !u!114 &1240385660
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  text: No
+  description: 
+  targetBlock: {fileID: 1240385652}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1240385661
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  text: Yes
+  description: 
+  targetBlock: {fileID: 1240385659}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1240385662
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: Grab a candle?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1240385663
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetDisable
+  delay: 0
+--- !u!114 &1240385664
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240385649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 124
+    y: 66
+    width: 173
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 21
+  blockName: Candle Pickup (Copy)
+  description: 
+  eventHandler: {fileID: 1240385656}
+  commandList:
+  - {fileID: 1240385663}
+  - {fileID: 1240385662}
+  - {fileID: 1240385661}
+  - {fileID: 1240385660}
+  suppressAllAutoSelections: 0
 --- !u!1001 &1256493407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17997,6 +18110,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1716083894905547148, guid: e2ffc5787b3ed374aba3d1ee0ceb2a64,
     type: 3}
   m_PrefabInstance: {fileID: 1910931701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1364953459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4934768666606349390, guid: 69714c589bd56884292a0b09b1a3d96e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1269887114}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1369691424
 PrefabInstance:
@@ -20556,26 +20675,13 @@ GameObject:
   - component: {fileID: 1570476017}
   - component: {fileID: 1570476019}
   - component: {fileID: 1570476018}
-  - component: {fileID: 1570476016}
-  - component: {fileID: 1570476027}
   - component: {fileID: 1570476028}
-  - component: {fileID: 1570476026}
   - component: {fileID: 1570476024}
   - component: {fileID: 1570476025}
-  - component: {fileID: 1570476030}
-  - component: {fileID: 1570476035}
-  - component: {fileID: 1570476034}
-  - component: {fileID: 1570476033}
   - component: {fileID: 1570476029}
-  - component: {fileID: 1570476032}
-  - component: {fileID: 1570476031}
   - component: {fileID: 1570476037}
-  - component: {fileID: 1570476042}
-  - component: {fileID: 1570476041}
   - component: {fileID: 1570476020}
   - component: {fileID: 1570476038}
-  - component: {fileID: 1570476040}
-  - component: {fileID: 1570476039}
   - component: {fileID: 1570476021}
   - component: {fileID: 1570476053}
   - component: {fileID: 1570476052}
@@ -20584,7 +20690,6 @@ GameObject:
   - component: {fileID: 1570476049}
   - component: {fileID: 1570476048}
   - component: {fileID: 1570476047}
-  - component: {fileID: 1570476046}
   - component: {fileID: 1570476045}
   - component: {fileID: 1570476044}
   - component: {fileID: 1570476043}
@@ -20596,8 +20701,32 @@ GameObject:
   - component: {fileID: 1570476036}
   - component: {fileID: 1570476022}
   - component: {fileID: 1570476059}
-  - component: {fileID: 1570476061}
   - component: {fileID: 1570476060}
+  - component: {fileID: 1570476071}
+  - component: {fileID: 1570476070}
+  - component: {fileID: 1570476069}
+  - component: {fileID: 1570476068}
+  - component: {fileID: 1570476067}
+  - component: {fileID: 1570476066}
+  - component: {fileID: 1570476065}
+  - component: {fileID: 1570476064}
+  - component: {fileID: 1570476063}
+  - component: {fileID: 1570476062}
+  - component: {fileID: 1570476061}
+  - component: {fileID: 1570476042}
+  - component: {fileID: 1570476041}
+  - component: {fileID: 1570476040}
+  - component: {fileID: 1570476039}
+  - component: {fileID: 1570476035}
+  - component: {fileID: 1570476034}
+  - component: {fileID: 1570476033}
+  - component: {fileID: 1570476032}
+  - component: {fileID: 1570476031}
+  - component: {fileID: 1570476030}
+  - component: {fileID: 1570476027}
+  - component: {fileID: 1570476026}
+  - component: {fileID: 1570476016}
+  - component: {fileID: 1570476046}
   m_Layer: 0
   m_Name: BookFlowchart
   m_TagString: Untagged
@@ -20618,7 +20747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 7, y: 7}
+  scrollPos: {x: 7, y: 8}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 483
@@ -20630,9 +20759,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1570476017}
+  - {fileID: 1570476063}
   selectedCommands:
-  - {fileID: 1570476021}
+  - {fileID: 1570476031}
   variables:
   - {fileID: 1570476024}
   - {fileID: 1570476029}
@@ -20655,41 +20784,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 5
+  itemId: 82
   indentLevel: 0
-  textObject: {fileID: 345224434}
-  text:
-    stringRef: {fileID: 0}
-    stringVal: "When people discuss Witch Trials during the Middle Ages, The Salem
-      Witch Trials is often what is referenced. However, something a good portion
-      of today's modern society rarely likes to acknowledge is how many huntings
-      actually were organised with most huntings, and deaths, coming from Europe.
-      \r\n\r\nUp until the early 15th century, there was little association of witchcraft
-      with Satan. Burning was often favoured, particularly in Europe, as it was considered
-      a more painful way to die. Prosecutors in the American colonies generally preferred
-      hanging in cases of witchcraft. Sweden was a country of few witch trials compared
-      to other countries in Europe. \r\n\r\nIn Sweden, around 400 people were executed
-      for witchcraft with about 300 of them occurring during a short but intense
-      witch hysteria generally referred to as \"The Great Noise\". \r\n\r\nThe first
-      Swedish witch trial happened as early as the year 1492. The Tors\xE5ker witch
-      trials took place in 1675 and is regarded as the largest witch trials in Swedish
-      history. \r\n\r\nIn a single day 71 people (65 women and 6 men) were beheaded
-      and then burned. However, the Mora witch trials which took place in Mora and
-      Kiruna is the most internationally famous Swedish case. It is said to have
-      even influenced the witch trials in Salem.\r\n\r\n"
-  description: 
-  clearText: 1
-  waitUntilFinished: 1
-  textColor: 0
-  setAlpha:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  setColor:
-    colorRef: {fileID: 0}
-    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1570476014}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1570476017
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20704,7 +20810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 359
+    x: 357
     y: 104
     width: 120
     height: 40
@@ -20720,9 +20826,14 @@ MonoBehaviour:
   - {fileID: 1570476018}
   - {fileID: 1570476037}
   - {fileID: 1570476028}
-  - {fileID: 1570476016}
-  - {fileID: 1570476027}
-  - {fileID: 1570476026}
+  - {fileID: 1570476064}
+  - {fileID: 1570476071}
+  - {fileID: 1570476070}
+  - {fileID: 1570476068}
+  - {fileID: 1570476069}
+  - {fileID: 1570476067}
+  - {fileID: 1570476066}
+  - {fileID: 1570476065}
   - {fileID: 1570476025}
   - {fileID: 1570476020}
   - {fileID: 1570476053}
@@ -20733,9 +20844,9 @@ MonoBehaviour:
   - {fileID: 1570476048}
   - {fileID: 1570476047}
   - {fileID: 1570476046}
+  - {fileID: 1570476045}
   - {fileID: 1570476054}
   - {fileID: 1570476043}
-  - {fileID: 1570476045}
   - {fileID: 1570476044}
   - {fileID: 1570476021}
   - {fileID: 1570476060}
@@ -20856,7 +20967,7 @@ MonoBehaviour:
   itemId: 41
   indentLevel: 1
   targetFlowchart: {fileID: 1570476015}
-  targetBlock: {fileID: 1570476030}
+  targetBlock: {fileID: 1570476063}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -20921,21 +21032,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf9e2e4334293449850759c812dd9db, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 8
+  itemId: 81
   indentLevel: 0
-  keyCode: 0
-  keyCodeNegative: 0
-  keyCodeName:
-    stringRef: {fileID: 0}
-    stringVal: Fire1
-  keyCodeNameNegative:
-    stringRef: {fileID: 0}
-    stringVal: 
-  keyQueryType: 0
-  outValue: {fileID: 1570476024}
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
 --- !u!114 &1570476027
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20945,32 +21049,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598f181ee459641a9b0a5849fbc3240c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 6
+  itemId: 68
   indentLevel: 0
-  _targetObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 345224434}
-  _tweenName:
-    stringRef: {fileID: 0}
-    stringVal: 
-  _duration:
-    floatRef: {fileID: 1570476029}
-    floatVal: 10
-  easeType: 2
-  loopType: 0
-  stopPreviousTweens: 0
-  waitUntilFinished: 1
-  targetObjectOLD: {fileID: 0}
-  tweenNameOLD: 
-  durationOLD: 0
-  _offset:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 400, z: 0}
-  space: 1
-  offsetOLD: {x: 0, y: 0, z: 0}
+  targetObjects:
+  - {fileID: 75932788}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0
 --- !u!114 &1570476028
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21016,33 +21115,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 154
-    y: 101
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 10
-  blockName: More Read
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1570476040}
-  - {fileID: 1570476042}
-  - {fileID: 1570476035}
-  - {fileID: 1570476034}
-  - {fileID: 1570476033}
-  - {fileID: 1570476032}
-  - {fileID: 1570476031}
-  - {fileID: 1570476041}
-  - {fileID: 1570476039}
-  - {fileID: 1570476061}
-  suppressAllAutoSelections: 0
+  itemId: 67
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 345224434}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1570476031
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21052,18 +21136,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 15
+  itemId: 66
   indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 345224434}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 2
+  durationOLD: 0
 --- !u!114 &1570476032
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21073,21 +21154,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf9e2e4334293449850759c812dd9db, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 14
+  itemId: 65
   indentLevel: 0
-  keyCode: 0
-  keyCodeNegative: 0
-  keyCodeName:
+  textObject: {fileID: 345224434}
+  text:
     stringRef: {fileID: 0}
-    stringVal: Fire1
-  keyCodeNameNegative:
-    stringRef: {fileID: 0}
-    stringVal: 
-  keyQueryType: 0
-  outValue: {fileID: 1570476024}
+    stringVal: '
+
+      In a single day 71 people (65 women and 6 men) were beheaded
+      and then burned. However, the Mora witch trials which took place in Mora and
+      Kiruna is the most internationally famous Swedish case. It is said to have
+      even influenced the witch trials in Salem.
+
+      
+
+'
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1570476033
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21097,32 +21191,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598f181ee459641a9b0a5849fbc3240c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 64
   indentLevel: 0
-  _targetObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 345224434}
-  _tweenName:
-    stringRef: {fileID: 0}
-    stringVal: 
   _duration:
-    floatRef: {fileID: 1570476029}
-    floatVal: 0
-  easeType: 2
-  loopType: 0
-  stopPreviousTweens: 0
-  waitUntilFinished: 1
-  targetObjectOLD: {fileID: 0}
-  tweenNameOLD: 
+    floatRef: {fileID: 0}
+    floatVal: 1
   durationOLD: 0
-  _offset:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 400, z: 0}
-  space: 1
-  offsetOLD: {x: 0, y: 0, z: 0}
 --- !u!114 &1570476034
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21135,32 +21212,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 12
+  itemId: 63
   indentLevel: 0
   textObject: {fileID: 345224434}
   text:
     stringRef: {fileID: 0}
-    stringVal: "When people discuss Witch Trials during the Middle Ages, The Salem
-      Witch Trials is often what is referenced. However, something a good portion
-      of today's modern society rarely likes to acknowledge is how many huntings
-      actually were organised with most huntings, and deaths, coming from Europe.
-      \r\n\r\nUp until the early 15th century, there was little association of witchcraft
-      with Satan. Burning was often favoured, particularly in Europe, as it was considered
-      a more painful way to die. Prosecutors in the American colonies generally preferred
-      hanging in cases of witchcraft. Sweden was a country of few witch trials compared
-      to other countries in Europe. \r\n\r\nIn Sweden, around 400 people were executed
-      for witchcraft with about 300 of them occurring during a short but intense
-      witch hysteria generally referred to as \"The Great Noise\". \r\n\r\nThe first
-      Swedish witch trial happened as early as the year 1492. The Tors\xE5ker witch
-      trials took place in 1675 and is regarded as the largest witch trials in Swedish
-      history. \r\n\r\nIn a single day 71 people (65 women and 6 men) were beheaded
-      and then burned. However, the Mora witch trials which took place in Mora and
-      Kiruna is the most internationally famous Swedish case. It is said to have
-      even influenced the witch trials in Salem.\r\n\r\n"
+    stringVal: "\nIn Sweden, around 400 people were executed for witchcraft with
+      about 300 of them occurring during a short but intense witch hysteria generally
+      referred to as \"The Great Noise\". \r\n\r\nThe first Swedish witch trial happened
+      as early as the year 1492. The Tors\xE5ker witch trials took place in 1675
+      and is regarded as the largest witch trials in Swedish history. \r\n\n"
   description: 
   clearText: 1
   waitUntilFinished: 1
-  textColor: 0
+  textColor: 1
   setAlpha:
     floatRef: {fileID: 0}
     floatVal: 1
@@ -21176,18 +21241,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 11
+  itemId: 62
   indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 345224434}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!114 &1570476036
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21258,14 +21320,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 23
+  itemId: 61
   indentLevel: 0
-  targetObject: {fileID: 642878070}
-  methodName: SetEnable
-  delay: 0
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: "\nUp until the early 15th century, there was little association of
+      witchcraft with Satan. Burning was often favoured, particularly in Europe,
+      as it was considered a more painful way to die. Prosecutors in the American
+      colonies generally preferred hanging in cases of witchcraft. Sweden was a country
+      of few witch trials compared to other countries in Europe. \r\n\r\n\r\n"
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1570476040
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21275,14 +21352,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 22
+  itemId: 60
   indentLevel: 0
-  targetObject: {fileID: 642878070}
-  methodName: SetDisable
-  delay: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!114 &1570476041
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21292,27 +21370,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 19
+  itemId: 59
   indentLevel: 0
-  targetObjects:
-  - {fileID: 75932788}
-  tweenType: 2
-  waitUntilFinished:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  duration:
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: "\nWhen people discuss Witch Trials during the Middle Ages, The Salem
+      Witch Trials is often what is referenced. However, something a good portion
+      of today's modern society rarely likes to acknowledge is how many huntings
+      actually were organised with most huntings, and deaths, coming from Europe.
+      \r\n\n"
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
     floatRef: {fileID: 0}
     floatVal: 1
-  fadeMode: 0
-  targetColor:
+  setColor:
     colorRef: {fileID: 0}
     colorVal: {r: 1, g: 1, b: 1, a: 1}
-  targetAlpha:
-    floatRef: {fileID: 0}
-    floatVal: 0
 --- !u!114 &1570476042
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21322,27 +21402,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 18
+  itemId: 58
   indentLevel: 0
-  targetObjects:
-  - {fileID: 75932788}
-  tweenType: 2
-  waitUntilFinished:
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 345224434}
+  activeState:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  duration:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  fadeMode: 0
-  targetColor:
-    colorRef: {fileID: 0}
-    colorVal: {r: 1, g: 1, b: 1, a: 1}
-  targetAlpha:
-    floatRef: {fileID: 0}
-    floatVal: 0.7
+  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1570476043
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21418,14 +21489,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 32
+  itemId: 83
   indentLevel: 0
+  description: 
   targetObject: {fileID: 130636723}
-  methodName: CloseDoor
-  delay: 0
+  targetComponentAssemblyName: DoorScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: DoorScript
+  targetMethod: CloseDoor
+  targetMethodText: 'CloseDoor (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &1570476047
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21851,18 +21933,290 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570476014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 43
+  itemId: 57
   indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1570476014}
-  activeState:
+  targetObjects:
+  - {fileID: 75932788}
+  tweenType: 2
+  waitUntilFinished:
     booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
+    booleanVal: 1
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0.7
+--- !u!114 &1570476062
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 54
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetDisable
+  delay: 0
+--- !u!114 &1570476063
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 147
+    y: 96
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: More Read
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1570476062}
+  - {fileID: 1570476061}
+  - {fileID: 1570476042}
+  - {fileID: 1570476041}
+  - {fileID: 1570476040}
+  - {fileID: 1570476039}
+  - {fileID: 1570476035}
+  - {fileID: 1570476034}
+  - {fileID: 1570476033}
+  - {fileID: 1570476032}
+  - {fileID: 1570476031}
+  - {fileID: 1570476030}
+  - {fileID: 1570476027}
+  - {fileID: 1570476026}
+  - {fileID: 1570476016}
+  suppressAllAutoSelections: 0
+--- !u!114 &1570476064
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
+  indentLevel: 0
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: "\nWhen people discuss Witch Trials during the Middle Ages, The Salem
+      Witch Trials is often what is referenced. However, something a good portion
+      of today's modern society rarely likes to acknowledge is how many huntings
+      actually were organised with most huntings, and deaths, coming from Europe.
+      \r\n\n"
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1570476065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 2
+  durationOLD: 0
+--- !u!114 &1570476066
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  indentLevel: 0
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: '
+
+      In a single day 71 people (65 women and 6 men) were beheaded
+      and then burned. However, the Mora witch trials which took place in Mora and
+      Kiruna is the most internationally famous Swedish case. It is said to have
+      even influenced the witch trials in Salem.
+
+      
+
+'
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1570476067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
+--- !u!114 &1570476068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
+--- !u!114 &1570476069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 47
+  indentLevel: 0
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: "\nIn Sweden, around 400 people were executed for witchcraft with
+      about 300 of them occurring during a short but intense witch hysteria generally
+      referred to as \"The Great Noise\". \r\n\r\nThe first Swedish witch trial happened
+      as early as the year 1492. The Tors\xE5ker witch trials took place in 1675
+      and is regarded as the largest witch trials in Swedish history. \r\n\n"
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1570476070
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2261dbe44de43a980e6f7c77c88f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  textObject: {fileID: 345224434}
+  text:
+    stringRef: {fileID: 0}
+    stringVal: "\nUp until the early 15th century, there was little association of
+      witchcraft with Satan. Burning was often favoured, particularly in Europe,
+      as it was considered a more painful way to die. Prosecutors in the American
+      colonies generally preferred hanging in cases of witchcraft. Sweden was a country
+      of few witch trials compared to other countries in Europe. \r\n\n"
+  description: 
+  clearText: 1
+  waitUntilFinished: 1
+  textColor: 1
+  setAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  setColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1570476071
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570476014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!1001 &1585698900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22199,6 +22553,342 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1590775297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1613250459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613250472}
+  - component: {fileID: 1613250471}
+  - component: {fileID: 1613250470}
+  - component: {fileID: 1613250469}
+  - component: {fileID: 1613250468}
+  - component: {fileID: 1613250467}
+  - component: {fileID: 1613250466}
+  - component: {fileID: 1613250465}
+  - component: {fileID: 1613250464}
+  - component: {fileID: 1613250463}
+  - component: {fileID: 1613250462}
+  - component: {fileID: 1613250461}
+  - component: {fileID: 1613250460}
+  m_Layer: 0
+  m_Name: Flowchart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1613250460
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1613250470}
+  suppressBlockAutoSelect: 0
+--- !u!114 &1613250461
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &1613250462
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 193
+    y: 123
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 25
+  blockName: No (Copy)
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1613250461}
+  suppressAllAutoSelections: 0
+--- !u!114 &1613250463
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetEnable
+  delay: 0
+--- !u!114 &1613250464
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1757772386}
+  targetComponentAssemblyName: CandleScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CandleScript
+  targetMethod: PickUp
+  targetMethodText: 'PickUp (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1613250465
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 52
+    y: 126
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 24
+  blockName: Yes (Copy)
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1613250464}
+  - {fileID: 1613250463}
+  suppressAllAutoSelections: 0
+--- !u!114 &1613250466
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  text: No
+  description: 
+  targetBlock: {fileID: 1613250462}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1613250467
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  text: Yes
+  description: 
+  targetBlock: {fileID: 1613250465}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1613250468
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: Grab a candle?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1613250469
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  targetObject: {fileID: 642878070}
+  methodName: SetDisable
+  delay: 0
+--- !u!114 &1613250470
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 124
+    y: 66
+    width: 173
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 21
+  blockName: Candle Pickup (Copy)
+  description: 
+  eventHandler: {fileID: 1613250460}
+  commandList:
+  - {fileID: 1613250469}
+  - {fileID: 1613250468}
+  - {fileID: 1613250467}
+  - {fileID: 1613250466}
+  suppressAllAutoSelections: 0
+--- !u!114 &1613250471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks:
+  - {fileID: 1613250465}
+  selectedCommands:
+  - {fileID: 1613250464}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!4 &1613250472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.698, y: -1.387, z: -17.163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1757772385}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1620553125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6825507373034805633, guid: 7aaf266f03c751e4fae5d6f8cd52efcd,
@@ -23889,6 +24579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   book: {fileID: 0}
   playerController: {fileID: 0}
+  candlePickup: {fileID: 0}
 --- !u!135 &1757772388
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30123,7 +30814,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065310477}
-  m_LocalRotation: {x: 0.30251253, y: -0.000000007979946, z: 0.0000000025316385, w: 0.95314544}
+  m_LocalRotation: {x: 0.30251253, y: 0.000000024820604, z: -0.000000007878303, w: 0.95314544}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -8,6 +8,7 @@ public class CandleScript : MonoBehaviour
     GameObject intro;
     public GameObject book;
     public PlayerController playerController;
+    public GameObject candlePickup;
 
     private void Start()
     {
@@ -24,9 +25,7 @@ public class CandleScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && bookScript.puzzleStarted == true)
             {
-                intro.SendMessage("CandlePickup");
-                
-
+                candlePickup.SetActive(true);
             }
         }
     }
