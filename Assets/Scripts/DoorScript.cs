@@ -154,4 +154,14 @@ public class DoorScript : MonoBehaviour
         }
 
     }
+
+    public void Lock()
+    {
+        locked = true;
+    }
+
+    public void Unlock()
+    {
+        locked = false;
+    }
 }

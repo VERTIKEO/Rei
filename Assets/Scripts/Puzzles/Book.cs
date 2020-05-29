@@ -34,9 +34,8 @@ public class Book : MonoBehaviour
 
             if (firstTimeRead == true)
             {
-                ghostGirl.SetActive(true);
-                doorScript = puzzleDoor.GetComponent<DoorScript>();
-                doorScript.CloseDoor();
+                //doorScript = puzzleDoor.GetComponent<DoorScript>();
+                //doorScript.CloseDoor();
                 bookText.SendMessage("First Read");
                 puzzleStarted = true;
 
