@@ -6,6 +6,7 @@ public class Book : MonoBehaviour
 {
     public string thought;
     public string thought2;
+    public bool puzzleStarted = false;
     public GameObject ghostGirl;
     public GameObject puzzleDoor;
     public GameObject playerThoughts;
@@ -40,6 +41,7 @@ public class Book : MonoBehaviour
                 ghostGirl.SetActive(true);
                 doorScript = puzzleDoor.GetComponent<DoorScript>();
                 doorScript.CloseDoor();
+                puzzleStarted = true;
                 //VN Script here
                 firstTimeRead = false;
             }
