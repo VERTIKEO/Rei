@@ -23680,6 +23680,46 @@ PrefabInstance:
       propertyPath: sounds.Array.data[0].volume
       value: 0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ecb0e48859c47d4ba327838da780547, type: 3}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e64a18568e025b4fab838ea3f7e8020, type: 3}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[19].volume
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d64e30080f8d4944bc026326abbfa93, type: 3}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[17].volume
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473451144247706647, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: sounds.Array.data[17].pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbcf6f60b690c4384adae727f4a3df3b, type: 3}
 --- !u!1001 &6235239760123926966
