@@ -36,7 +36,7 @@ public class Book : MonoBehaviour
             {
                 //doorScript = puzzleDoor.GetComponent<DoorScript>();
                 //doorScript.CloseDoor();
-                bookText.SendMessage("First Read");
+                bookText.SendMessage("FirstRead");
                 puzzleStarted = true;
 
                 firstTimeRead = false;
