@@ -118,7 +118,14 @@ public class ScenarioSwitcher : MonoBehaviour
      */
     [PostProcessScene(0)]
     public static void OnPostProcessScene() {
-        ScenarioSwitcher manager = GameObject.Find("GameManager").GetComponent<ScenarioSwitcher>();
+        ScenarioSwitcher manager;
+        
+        try {
+            manager = GameObject.Find("GameManager").GetComponent<ScenarioSwitcher>();
+        } catch {
+            Debug.Log("No ScenarioSwitcher in scene, skipping");
+            return;
+        }
 
         // Add FadeScreen to camera
         GameObject screen = new GameObject("FadeScreen");

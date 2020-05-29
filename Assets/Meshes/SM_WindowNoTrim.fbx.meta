@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b17356ca38b0cc845afcb52d07d33b65
+guid: 00e07fe976ff0f048a49862a1a36ea02
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Color444667
     second: {fileID: 2100000, guid: 6afbae801d609204683e09f48537b515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 8984297520f991a48a38e67413a870de, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -66,8 +71,8 @@ ModelImporter:
     indexFormat: 0
     secondaryUVAngleDistortion: 2
     secondaryUVAreaDistortion: 5
-    secondaryUVHardAngle: 60
-    secondaryUVPackMargin: 16
+    secondaryUVHardAngle: 80
+    secondaryUVPackMargin: 8
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
