@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationSpeed: 1
   moveDirection: {x: 0, y: 0, z: 0}
-  speed: 2
+  speed: 1.2
   gravity: 1
   maxHealth: 100
   currentHealth: 0
