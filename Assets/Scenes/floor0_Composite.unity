@@ -8697,7 +8697,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678168747}
-  m_LocalRotation: {x: -0.045627013, y: -0.000000019082838, z: -8.729967e-10, w: 0.9989586}
+  m_LocalRotation: {x: -0.045627013, y: -0.000000019121751, z: -8.747742e-10, w: 0.9989586}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9428,7 +9428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 1613250471}
 --- !u!4 &751932482
 Transform:
   m_ObjectHideFlags: 1
@@ -14949,7 +14949,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079722489}
-  m_LocalRotation: {x: -0.123708, y: -0.000000025366258, z: -0.0000000031628957, w: 0.9923187}
+  m_LocalRotation: {x: -0.12370797, y: 0.0000000042070933, z: 5.243153e-10, w: 0.9923187}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -22439,7 +22439,7 @@ GameObject:
   - component: {fileID: 1613250461}
   - component: {fileID: 1613250460}
   m_Layer: 0
-  m_Name: Flowchart
+  m_Name: CandleFlowchart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25492,17 +25492,17 @@ PrefabInstance:
     - target: {fileID: 1731834408609941704, guid: 49bfc8682d7a79346a4f4f4ca6b582d1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12371516
+      value: -0.1237151
       objectReference: {fileID: 0}
     - target: {fileID: 1731834408609941704, guid: 49bfc8682d7a79346a4f4f4ca6b582d1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029573378
+      value: 0.000000029573378
       objectReference: {fileID: 0}
     - target: {fileID: 1731834408609941704, guid: 49bfc8682d7a79346a4f4f4ca6b582d1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000036869996
+      value: 0.0000000036869978
       objectReference: {fileID: 0}
     - target: {fileID: 1731834408609941704, guid: 49bfc8682d7a79346a4f4f4ca6b582d1,
         type: 3}
