@@ -2,10 +2,12 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
+    public GameObject gameOver;
     Animator animator;
 
     [Header("Animations")]
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
+        gameOver = GameObject.Find("GameOverFlowchart");
     }
 
     // Update is called once per frame
@@ -63,10 +66,10 @@ public class PlayerController : MonoBehaviour
             animator.speed = 1;
         }
 
-        /*if (currentHealth <= 0f)
+        if (currentHealth <= 0f)
         {
-            GameOver();
-        }*/
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void SetEnable()
