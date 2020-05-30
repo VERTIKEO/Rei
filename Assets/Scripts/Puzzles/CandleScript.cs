@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CandleScript : MonoBehaviour
 {
+    bool playerClose;
     Book bookScript;
     public GameObject book;
     public PlayerController playerController;
@@ -18,14 +19,27 @@ public class CandleScript : MonoBehaviour
         candlePickup = GameObject.Find("CandleFlowchart");
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1") && bookScript.puzzleStarted == true && playerClose == true)
+        {
+            candlePickup.SetActive(true);
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetButtonDown("Fire1") && bookScript.puzzleStarted == true)
-            {
-                candlePickup.SetActive(true);
-            }
+            playerClose = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerClose = false;
         }
     }
 
