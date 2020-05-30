@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.38039216, g: 0.30588236, b: 0.5176471, a: 1}
+  m_AmbientSkyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -23370,25 +23370,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 587222102}
     m_Modifications:
-    - target: {fileID: 1919117399378412828, guid: def40e42b7bfd234691e9774bba10a29,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a07609667c9644d2a8d98f568fb497db, type: 2}
     - target: {fileID: 6827978490998437041, guid: def40e42b7bfd234691e9774bba10a29,
         type: 3}
       propertyPath: m_Name
       value: SmallTable
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490327977581226535, guid: def40e42b7bfd234691e9774bba10a29,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490327977581226535, guid: def40e42b7bfd234691e9774bba10a29,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7537481623914071714, guid: def40e42b7bfd234691e9774bba10a29,
         type: 3}
