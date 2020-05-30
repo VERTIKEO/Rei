@@ -24442,7 +24442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   book: {fileID: 0}
   playerController: {fileID: 0}
-  candlePickup: {fileID: 0}
+  candlePickup: {fileID: 1613250459}
 --- !u!135 &1757772388
 SphereCollider:
   m_ObjectHideFlags: 0
