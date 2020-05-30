@@ -118,6 +118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rooftrim
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a44eb53f8da469c4f8a4f91215e9dfcc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a44eb53f8da469c4f8a4f91215e9dfcc, type: 3}
 --- !u!4 &5537979146166641302 stripped
@@ -192,6 +197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_WallNoTrim
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5811818997f288245a6f8b33a92de829,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5811818997f288245a6f8b33a92de829, type: 3}
