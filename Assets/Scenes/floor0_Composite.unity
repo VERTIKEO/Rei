@@ -26981,7 +26981,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1900938349}
   selectedCommands:
-  - {fileID: 1900938358}
+  - {fileID: 1900938383}
   variables:
   - {fileID: 1900938373}
   - {fileID: 1900938371}
@@ -27157,7 +27157,7 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1433945852}
+    gameObjectVal: {fileID: 2079380123}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -29152,7 +29152,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2055040488}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2055040496}
   variables:
   - {fileID: 2055040456}
   - {fileID: 2055040455}
