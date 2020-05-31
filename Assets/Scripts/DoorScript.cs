@@ -53,6 +53,7 @@ public class DoorScript : MonoBehaviour
             }
 
             Debug.Log("Unlocked door and removed " + keyItem);
+            SoundManager.i.PlayOnce("DoorUnlocking");
         }
         if (locked == true && playerClose == true && Input.GetButtonDown("Fire1"))
         {
@@ -61,6 +62,7 @@ public class DoorScript : MonoBehaviour
         else if (Input.GetButtonDown("Fire1") && playerClose == true)
         {
             Debug.Log("Open Door");
+            SoundManager.i.PlayOnce("DoorCreaking");
             if (_timer == 0)
             {
                 _timer = openTime;
@@ -127,6 +129,7 @@ public class DoorScript : MonoBehaviour
 
     public void CloseDoor()
     {
+        SoundManager.i.PlayOnce("DoorSlamming");
         gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
             open = false;
     }

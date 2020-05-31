@@ -59,10 +59,12 @@ public class PlayerController : MonoBehaviour
         if(movementButtons) {
             // set walking animation
             animator.SetBool("isWalking", true);
+            SoundManager.i.LoopSound("WalkingSteps");
             animator.speed = animationSpeed * speed;
         } else {
             // set idle animation
             animator.SetBool("isWalking", false);
+            SoundManager.i.StopPlaying("WalkingSteps");
             animator.speed = 1;
         }
 
@@ -82,6 +84,7 @@ public class PlayerController : MonoBehaviour
     public void SetDisable()
     {
         this.enabled = false;
+        animator.SetBool("isWalking", false);
 
         Cinemachine.CinemachineBrain brainCamera = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
         //StartCoroutine("RecenterAndDisableCamera", brainCamera);
