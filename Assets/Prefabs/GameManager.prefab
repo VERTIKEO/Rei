@@ -205,7 +205,7 @@ MonoBehaviour:
   lightingScenarioDatas: []
   latestBuildHasReltimeLights: 0
   allowLoadingLightingScenes: 1
-  applyLightmapScaleAndOffset: 1
+  applyLightmapScaleAndOffset: 0
   lightingScenariosScenes: []
   lightingScenesNames:
   - 
@@ -224,7 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76dafac7475746348f27896fe94c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioList: []
   fadeInTime: 0.5
   fadeWaitTime: 0.5
   fadeOutTime: 2
-  screenMaterial: {fileID: 0}
+  screenMaterial: {fileID: 2100000, guid: aae4ea3091b224aefb9aa872eef92da8, type: 2}
