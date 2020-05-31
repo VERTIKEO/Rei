@@ -12,9 +12,10 @@ public class BurnablePainting : MonoBehaviour
     public GameObject door;
     public GameObject playerThoughts;
     public GameObject ghostGirl;
-    TextMesh thoughts;
+    public GameObject options;
     DoorScript doorScript;
     PlayerController playerController;
+    
 
     public float damage = 50f;
     
@@ -22,7 +23,6 @@ public class BurnablePainting : MonoBehaviour
     void Start()
     {
         doorScript = door.GetComponent<DoorScript>();
-        thoughts = playerThoughts.GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -37,10 +37,11 @@ public class BurnablePainting : MonoBehaviour
         {
             playerController = other.gameObject.GetComponent<PlayerController>();
 
-            if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains(candle) && isTorsaker == true)
+            if (Input.GetButtonDown("Fire1") && playerController.inventory.Contains(candle))
             {
+                options.SetActive(true);
                 /*playerThoughts.SetActive(true);
-                thoughts.text = "" + rightBurn;*/
+                thoughts.text = "" + rightBurn;
                 doorScript.locked = false;
                 ghostGirl.SetActive(false);
                 gameObject.SetActive(false);
@@ -49,7 +50,7 @@ public class BurnablePainting : MonoBehaviour
             {
                 //thoughts.text = "" + wrongBurn;
                 playerController.takeDamage(damage);
-                gameObject.SetActive(false);
+                gameObject.SetActive(false);*/
             }
         }
     }
