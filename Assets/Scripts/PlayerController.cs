@@ -2,10 +2,12 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
+    public GameObject gameOver;
     Animator animator;
 
     [Header("Animations")]
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
+        gameOver = GameObject.Find("GameOverFlowchart");
     }
 
     // Update is called once per frame
@@ -63,10 +66,35 @@ public class PlayerController : MonoBehaviour
             animator.speed = 1;
         }
 
-        /*if (currentHealth <= 0f)
+        if (currentHealth <= 0f)
         {
-            GameOver();
-        }*/
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    public void SetEnable()
+    {
+        this.enabled = true;
+
+        Camera.main.GetComponent<Cinemachine.CinemachineBrain>().enabled = true;
+    }
+
+    public void SetDisable()
+    {
+        this.enabled = false;
+
+        Cinemachine.CinemachineBrain brainCamera = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
+        //StartCoroutine("RecenterAndDisableCamera", brainCamera);
+        brainCamera.enabled = false;
+    }
+
+    private IEnumerable CameraRecenterAndDisable(Cinemachine.CinemachineBrain brainCamera) {
+        Cinemachine.CinemachineFreeLook camera = brainCamera.ActiveVirtualCamera as Cinemachine.CinemachineFreeLook;
+        
+        //camera.m_Heading.m_Bias = 120;
+        camera.m_RecenterToTargetHeading.RecenterNow();
+        yield return new WaitForSeconds(camera.m_RecenterToTargetHeading.m_RecenteringTime + 0.1f);
+        brainCamera.enabled = false;    // ...or anything else to reenable inputs
     }
 
     public void takeDamage(float takenDamage)
