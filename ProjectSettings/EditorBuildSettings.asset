@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ui_GameOver.unity
     guid: 35eb4a31ce7e4044c91300eecbf2669a
   - enabled: 1
+    path: Assets/Scenes/ui_Win.unity
+    guid: 57b99dfc6b1c94a7ea4ae3e1e6f3a200
+  - enabled: 1
     path: Assets/Scenes/floor0_Composite/floor0_Composite_Dark.unity
     guid: 420bc5db26e764389b0d2e51c3eee690
   - enabled: 1

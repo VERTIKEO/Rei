@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PickUpable : MonoBehaviour
 {
@@ -17,10 +18,10 @@ public class PickUpable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && playerClose == true)
+        if (playerClose == true && Input.GetButtonDown("Fire1"))
         {
-            pickUpKey.SetActive(true);
-
+            //pickUpKey.SetActive(true);
+            SceneManager.LoadScene("ui_Win");
         }
     }
 
