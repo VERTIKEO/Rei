@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabd632cb767bcf489a5c9b7ea9770cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpKey: {fileID: 0}
+  pickUpKey: {fileID: 460434601}
 --- !u!108 &127337930
 Light:
   m_ObjectHideFlags: 0
