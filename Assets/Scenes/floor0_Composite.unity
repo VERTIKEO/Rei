@@ -6055,8 +6055,8 @@ MonoBehaviour:
   itemId: 5
   indentLevel: 0
   storyText: The police searched the building, but had been unable to find any trace
-    of missing kids. Nor signs of entry. In the end, the children were labeled as
-    runaways.
+    of the missing kids. Nor signs of entry. In the end, the children were labeled
+    as runaways.
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 0}
@@ -31808,7 +31808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 1
-  storyText: "\u201C...?\u201D (There is something on the grund.)"
+  storyText: "\u201C...?\u201D (There is something on the ground.)"
   description: 
   character: {fileID: 1173061882}
   portrait: {fileID: 21300000, guid: d2b573497ed44fd4aa5fff36a8961eb2, type: 3}
