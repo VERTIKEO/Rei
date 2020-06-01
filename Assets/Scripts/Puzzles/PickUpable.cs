@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class PickUpable : MonoBehaviour
 {
     bool playerClose = false;
-    GameObject pickUpKey;
-    GameObject player;
+    public GameObject pickUpKey;
+    PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
-        pickUpKey = GameObject.Find("KeyFlowchart");
-        player = GameObject.Find("Player");
+        playerController = GameObject.FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -43,7 +42,6 @@ public class PickUpable : MonoBehaviour
 
     public void PickUp()
     {
-        PlayerController playerController = player.gameObject.GetComponent<PlayerController>();
         playerController.inventory.Add(gameObject.name);
 
         gameObject.SetActive(false);

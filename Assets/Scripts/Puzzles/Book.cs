@@ -22,14 +22,14 @@ public class Book : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && playerClose == true)
+        if (playerClose == true && puzzleStarted == false && Input.GetButtonDown("Fire1"))
         {
-            if (puzzleStarted == false)
-            {
-                puzzleStarted = true;
-            }
+            puzzleStarted = true;
+
+            Fungus.Vector3Variable ghostPos = new Fungus.Vector3Variable();
+            ghostPos.Value = ghostGirl.transform.position;
+            bookText.GetComponent<Fungus.Flowchart>().SetVariable<Fungus.Vector3Variable>("ghostPos", ghostPos);
             bookText.SetActive(true);
-  
         }
  
     }

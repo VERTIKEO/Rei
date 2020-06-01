@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEditor.Callbacks;
 
+[Serializable]
 public struct Scenario {
     public string name;
+    public VolumeProfile postProcessProfile;
     public string lightingScenario;
     public string backgroundMusic;
     public string fadeInSound;
@@ -16,7 +19,7 @@ public struct Scenario {
 
 public class ScenarioSwitcher : MonoBehaviour
 {
-    public readonly Scenario[] scenarioList;
+    public List<Scenario> scenarioList;
 
     [Header("Switch settings")]
     public float fadeInTime = 0.5f;
@@ -26,7 +29,7 @@ public class ScenarioSwitcher : MonoBehaviour
 
     [Header("Internals")]
     public Material screenMaterial;
-    private Renderer screen;
+    private UnityEngine.UI.Image screen;
 
     private bool _isLoading = false;
     private bool _isFading = false;
@@ -38,30 +41,42 @@ public class ScenarioSwitcher : MonoBehaviour
     }
     
 
-    public void SwitchScenario(string name) {
-        Scenario nextScenario = GetScenario(name);
+    public void SwitchScenario(string name, bool animateFade = true) {
+        try {
+            Debug.Log("Loading scenario: " + name);
+            Scenario nextScenario = GetScenario(name);
 
-        // Lock interactable objects
-        LockInteractables();
+            // Lock interactable objects
+            LockInteractables();
 
-        // Fade in screen
-        _isLoading = true;
-        StartCoroutine("FadeScreenCoroutine");
+            // Fade in screen
+            if(animateFade) {
+                _isLoading = true;
+                StartCoroutine("FadeScreenCoroutine");
+            }
 
-        // Call all scenario switches
+            // Call all scenario switches
 
-        // Switch lighting scenario
-        GetComponent<LevelLightmapData>().LoadLightingScenario(nextScenario.lightingScenario);
+            // Switch lighting scenario
+            GetComponent<LevelLightmapData>().LoadLightingScenario(nextScenario.lightingScenario);
+            Debug.Log("Loaded light scenario: " + nextScenario.lightingScenario);
+            Camera.main.GetComponent<Volume>().profile = nextScenario.postProcessProfile;
+            Debug.Log("Loaded profile: " + nextScenario.postProcessProfile.name);
 
-        // Fade out screen
-        _isLoading = false;
+            // Fade out screen
+            _isLoading = false;
+            if(!animateFade) _isFading = false;
 
-        // Unlock interactable objects
-        StartCoroutine("UnlockInteractablesCoroutine");
+            // Unlock interactable objects
+            StartCoroutine("UnlockInteractablesCoroutine");
+        } catch (Exception e) {
+            Debug.LogError("Failed to load scenario");
+            Debug.LogError(e);
+        }
     }
 
     public Scenario GetScenario(string name) {
-        for(int i = 0; i < scenarioList.Length; i++) {
+        for(int i = 0; i < scenarioList.Count; i++) {
             if(scenarioList[i].name.Equals(name)) {
                 return scenarioList[i];
             }
@@ -85,7 +100,7 @@ public class ScenarioSwitcher : MonoBehaviour
         timer = fadeInTime;
         screen.gameObject.SetActive(true);
         while(timer > 0f) {
-            screen.material.color = Color.Lerp(a, b, 1f - (timer / fadeInTime));
+            screen.color = Color.Lerp(a, b, 1f - (timer / fadeInTime));
             yield return null; //new WaitForEndOfFrame();
         }
 
@@ -98,7 +113,7 @@ public class ScenarioSwitcher : MonoBehaviour
         // Fade out
         timer = fadeOutTime;
         while(timer > 0f) {
-            screen.material.color = Color.Lerp(b, a, 1f - (timer / fadeOutTime));
+            screen.color = Color.Lerp(b, a, 1f - (timer / fadeOutTime));
             yield return null; //new WaitForEndOfFrame();
         }
         screen.gameObject.SetActive(false);
@@ -126,23 +141,5 @@ public class ScenarioSwitcher : MonoBehaviour
             Debug.Log("No ScenarioSwitcher in scene, skipping");
             return;
         }
-
-        // Add FadeScreen to camera
-        GameObject screen = new GameObject("FadeScreen");
-        screen.transform.parent = Camera.main.transform;
-        screen.transform.localPosition = new Vector3(0f, 0f, 0.5f);
-        screen.transform.localScale = new Vector3(100f, 100f, 1f);
-
-        MeshFilter screenMesh = screen.AddComponent<MeshFilter>();
-        screenMesh.mesh = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath<Mesh>("Library/unity default resources::Quad");
-
-        MeshRenderer screenRenderer = screen.AddComponent<MeshRenderer>();
-        screenRenderer.material = manager.screenMaterial;
-
-        screen.SetActive(false);
-
-        // Set FadeScreen in ScenarioSwitcher
-        manager.screen = screenRenderer;
     }
-    
 }
