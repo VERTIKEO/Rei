@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class CandleScript : MonoBehaviour
 {
-    bool playerClose;
-    Book bookScript;
-    public GameObject book;
+    bool playerClose = false;
+    public Book book;
     public PlayerController playerController;
     public GameObject candlePickup;
 
     private void Start()
     {
-        book = GameObject.Find("BookCube");
-        bookScript = book.GetComponent<Book>();
-        GameObject player = GameObject.Find("Player");
-        playerController = player.gameObject.GetComponent<PlayerController>();
-        candlePickup = GameObject.Find("CandleFlowchart");
+        playerController = GameObject.FindObjectOfType<PlayerController>();
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && bookScript.puzzleStarted == true && playerClose == true)
+        if (playerClose == true && book.puzzleStarted == true && Input.GetButtonDown("Fire1"))
         {
             candlePickup.SetActive(true);
         }
