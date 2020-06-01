@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+
+#if UNITY_EDITOR
 using UnityEditor.Callbacks;
+#endif
 
 [Serializable]
 public struct Scenario {
@@ -131,6 +134,7 @@ public class ScenarioSwitcher : MonoBehaviour
     /*
      *  Build-time optimization
      */
+    #if UNITY_EDITOR
     [PostProcessScene(0)]
     public static void OnPostProcessScene() {
         ScenarioSwitcher manager;
@@ -142,4 +146,5 @@ public class ScenarioSwitcher : MonoBehaviour
             return;
         }
     }
+    #endif
 }

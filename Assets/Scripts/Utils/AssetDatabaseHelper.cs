@@ -1,3 +1,6 @@
+
+#if UNITY_EDITOR
+
 using UnityEditor;
 using System.Linq;
 
@@ -40,3 +43,5 @@ public class AssetDatabaseHelper
         return path;
     }
 }
+
+#endif

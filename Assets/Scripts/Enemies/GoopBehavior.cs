@@ -3,7 +3,10 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor.Callbacks;
+#endif
 
 [Serializable]
 public class GoopKey {
@@ -58,6 +61,8 @@ public class GoopBehavior : MonoBehaviour
     private static readonly string _SEGMENT_NAME = "Segment";
     private static readonly string _SUBCOLLIDER_NAME = "Subcollider";
     private static readonly float _EPSILON = 0.00001f;
+    private static Mesh CUBE_MESH;
+
 
     [SerializeField] public List<GoopKey> path;
     public Material material;
@@ -138,8 +143,11 @@ public class GoopBehavior : MonoBehaviour
         }
     }
 
+    #if UNITY_EDITOR
     [PostProcessScene(0)]
     public static void OnPostProcessScene() {
+        CUBE_MESH = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath< Mesh > ( "Library/unity default resources::Cube");
+
         // clear and regenerate all colliders
         GoopBehavior[] goops = FindObjectsOfType<GoopBehavior>();
 
@@ -148,6 +156,7 @@ public class GoopBehavior : MonoBehaviour
             goops[i].GenerateColliders();
         }
     }
+    #endif
 
     /*
      *     Goop handling
@@ -208,7 +217,7 @@ public class GoopBehavior : MonoBehaviour
 
             // add mesh components
             MeshFilter mesh = segment.AddComponent<MeshFilter>();
-            mesh.mesh = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath< Mesh > ( "Library/unity default resources::Cube");
+            mesh.mesh = CUBE_MESH;
 
             MeshRenderer renderer = segment.AddComponent<MeshRenderer>();
             renderer.sharedMaterial = this.material;
