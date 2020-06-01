@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEditor.Callbacks;
 
 [CustomEditor(typeof(GoopBehavior))]
 public class GoopPathEditor : Editor
@@ -73,5 +74,18 @@ public class GoopPathEditor : Editor
         // Manage point B
         b.density = Handles.RadiusHandle(Quaternion.identity, targetComponent.transform.position + b.position, b.density);
         b.position = Handles.PositionHandle(targetComponent.transform.position + b.position, Quaternion.identity) - targetComponent.transform.position;
+    }
+
+    [PostProcessScene(0)]
+    public static void OnPostProcessScene() {
+        GoopBehavior.CUBE_MESH = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath< Mesh > ( "Library/unity default resources::Cube");
+
+        // clear and regenerate all colliders
+        GoopBehavior[] goops = FindObjectsOfType<GoopBehavior>();
+
+        for(int i = 0; i < goops.Length; i++) {
+            goops[i].ClearColliders();
+            goops[i].GenerateColliders();
+        }
     }
 }

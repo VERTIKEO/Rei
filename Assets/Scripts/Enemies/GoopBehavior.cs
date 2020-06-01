@@ -4,10 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor.Callbacks;
-#endif
-
 [Serializable]
 public class GoopKey {
     [SerializeField] public Vector3 position;
@@ -61,7 +57,7 @@ public class GoopBehavior : MonoBehaviour
     private static readonly string _SEGMENT_NAME = "Segment";
     private static readonly string _SUBCOLLIDER_NAME = "Subcollider";
     private static readonly float _EPSILON = 0.00001f;
-    private static Mesh CUBE_MESH;
+    public static Mesh CUBE_MESH;
 
 
     [SerializeField] public List<GoopKey> path;
@@ -143,21 +139,6 @@ public class GoopBehavior : MonoBehaviour
         }
     }
 
-    #if UNITY_EDITOR
-    [PostProcessScene(0)]
-    public static void OnPostProcessScene() {
-        CUBE_MESH = AssetDatabaseHelper.LoadAssetFromUniqueAssetPath< Mesh > ( "Library/unity default resources::Cube");
-
-        // clear and regenerate all colliders
-        GoopBehavior[] goops = FindObjectsOfType<GoopBehavior>();
-
-        for(int i = 0; i < goops.Length; i++) {
-            goops[i].ClearColliders();
-            goops[i].GenerateColliders();
-        }
-    }
-    #endif
-
     /*
      *     Goop handling
      */
@@ -221,6 +202,7 @@ public class GoopBehavior : MonoBehaviour
 
             MeshRenderer renderer = segment.AddComponent<MeshRenderer>();
             renderer.sharedMaterial = this.material;
+            renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
         }
 
         // Step 2) generate intra-keys
