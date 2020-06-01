@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEditor.Callbacks;
 
+[Serializable]
 public struct Scenario {
     public string name;
+    public VolumeProfile postProcessProfile;
     public string lightingScenario;
     public string backgroundMusic;
     public string fadeInSound;
@@ -16,7 +19,7 @@ public struct Scenario {
 
 public class ScenarioSwitcher : MonoBehaviour
 {
-    public readonly Scenario[] scenarioList;
+    public List<Scenario> scenarioList;
 
     [Header("Switch settings")]
     public float fadeInTime = 0.5f;
@@ -52,6 +55,7 @@ public class ScenarioSwitcher : MonoBehaviour
 
         // Switch lighting scenario
         GetComponent<LevelLightmapData>().LoadLightingScenario(nextScenario.lightingScenario);
+        Camera.main.GetComponent<Volume>().profile = nextScenario.postProcessProfile;
 
         // Fade out screen
         _isLoading = false;
@@ -61,7 +65,7 @@ public class ScenarioSwitcher : MonoBehaviour
     }
 
     public Scenario GetScenario(string name) {
-        for(int i = 0; i < scenarioList.Length; i++) {
+        for(int i = 0; i < scenarioList.Count; i++) {
             if(scenarioList[i].name.Equals(name)) {
                 return scenarioList[i];
             }
