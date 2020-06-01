@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         this.enabled = false;
         animator.SetBool("isWalking", false);
+        animator.speed = 1;
 
         Cinemachine.CinemachineBrain brainCamera = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
         //StartCoroutine("RecenterAndDisableCamera", brainCamera);
