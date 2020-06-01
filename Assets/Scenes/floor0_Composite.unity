@@ -23634,6 +23634,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1613250461}
+  - {fileID: 1613250473}
   suppressAllAutoSelections: 0
 --- !u!114 &1613250463
 MonoBehaviour:
@@ -23858,7 +23859,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1613250462}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1613250473}
   variables: []
   description: 
   stepPause: 0
@@ -23884,6 +23886,27 @@ Transform:
   m_Father: {fileID: 1757772385}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613250473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613250459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1613250459}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!4 &1620553125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6825507373034805633, guid: 7aaf266f03c751e4fae5d6f8cd52efcd,
@@ -30776,7 +30799,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2055040488}
   selectedCommands:
-  - {fileID: 2055040500}
+  - {fileID: 2055040496}
   variables:
   - {fileID: 2055040456}
   - {fileID: 2055040455}
