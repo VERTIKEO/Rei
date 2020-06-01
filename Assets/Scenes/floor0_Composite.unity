@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 2dcc66cb4abb9425187540bd64176e63,
+  m_LightingDataAsset: {fileID: 112000002, guid: 0c50ab15f4fcb4e0c978945298a8c8b9,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -807,7 +807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &75932789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1618,6 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabd632cb767bcf489a5c9b7ea9770cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpKey: {fileID: 0}
 --- !u!108 &127337930
 Light:
   m_ObjectHideFlags: 0
@@ -3295,12 +3296,12 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[0].position.x
-      value: 1.1947674
+      value: 0.48529696
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[0].position.z
-      value: 0.9068012
+      value: -1.3716412
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3310,7 +3311,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[1].position.x
-      value: 1.0395215
+      value: -0.28702295
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3340,7 +3341,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[3].position.x
-      value: -1.2062197
+      value: 1.20622
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3360,7 +3361,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[4].position.x
-      value: -1.5629655
+      value: 1.562966
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3375,7 +3376,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[5].position.x
-      value: -3.83
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3390,7 +3391,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[6].position.x
-      value: -4.48
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3405,7 +3406,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[7].position.x
-      value: -5.01
+      value: 5.01
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -3425,7 +3426,7 @@ PrefabInstance:
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
       propertyPath: path.Array.data[8].position.x
-      value: -6.74
+      value: 6.74
       objectReference: {fileID: 0}
     - target: {fileID: 7426197642948873331, guid: c913f418ceb8a40ba9cbf01ee8955351,
         type: 3}
@@ -6202,7 +6203,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 472799229}
   selectedCommands:
-  - {fileID: 472799233}
+  - {fileID: 472799227}
   variables: []
   description: 
   stepPause: 0
@@ -15198,7 +15199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079722489}
-  m_LocalRotation: {x: -0.12370797, y: 0.0000000042070933, z: 5.2430377e-10, w: 0.9923187}
+  m_LocalRotation: {x: -0.123708, y: -0.000000025366258, z: -0.0000000031629073, w: 0.9923187}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -26494,7 +26495,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: f82c1c1e4901b4567a16e34888d621b3,
+      objectReference: {fileID: 11400000, guid: 159925840e2244066ad628ef0f99cfaa,
         type: 2}
     - target: {fileID: 1731834408609941704, guid: 49bfc8682d7a79346a4f4f4ca6b582d1,
         type: 3}
@@ -30224,6 +30225,8 @@ GameObject:
   - component: {fileID: 2055040495}
   - component: {fileID: 2055040498}
   - component: {fileID: 2055040497}
+  - component: {fileID: 2055040500}
+  - component: {fileID: 2055040499}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -30258,7 +30261,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2055040488}
   selectedCommands:
-  - {fileID: 2055040490}
+  - {fileID: 2055040500}
   variables:
   - {fileID: 2055040456}
   - {fileID: 2055040455}
@@ -31112,9 +31115,11 @@ MonoBehaviour:
   - {fileID: 2055040486}
   - {fileID: 2055040485}
   - {fileID: 2055040484}
+  - {fileID: 2055040500}
   - {fileID: 2055040495}
   - {fileID: 2055040498}
   - {fileID: 2055040497}
+  - {fileID: 2055040499}
   - {fileID: 2055040479}
   - {fileID: 2055040478}
   - {fileID: 2055040469}
@@ -31350,6 +31355,86 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &2055040499
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055040452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 61
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  durationOLD: 0
+--- !u!114 &2055040500
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055040452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 60
+  indentLevel: 1
+  description: 
+  targetObject: {fileID: 636670281}
+  targetComponentAssemblyName: ScenarioSwitcher, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ScenarioSwitcher
+  targetMethod: SwitchScenario
+  targetMethodText: 'SwitchScenario (String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Light
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1001 &2055141979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32679,6 +32764,11 @@ PrefabInstance:
       propertyPath: lightingScenesNames.Array.data[0]
       value: floor0_Composite_Dark
       objectReference: {fileID: 0}
+    - target: {fileID: -3437993528999595445, guid: bbcf6f60b690c4384adae727f4a3df3b,
+        type: 3}
+      propertyPath: applyLightmapScaleAndOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 826886861175663112, guid: bbcf6f60b690c4384adae727f4a3df3b,
         type: 3}
       propertyPath: m_Name
@@ -32747,7 +32837,7 @@ PrefabInstance:
     - target: {fileID: 3523135912760036550, guid: bbcf6f60b690c4384adae727f4a3df3b,
         type: 3}
       propertyPath: scenarioList.Array.data[0].lightingScenario
-      value: floor0_Composite_ScenarioDark
+      value: floor0_Composite_Dark
       objectReference: {fileID: 0}
     - target: {fileID: 3523135912760036550, guid: bbcf6f60b690c4384adae727f4a3df3b,
         type: 3}
@@ -32764,7 +32854,7 @@ PrefabInstance:
     - target: {fileID: 3523135912760036550, guid: bbcf6f60b690c4384adae727f4a3df3b,
         type: 3}
       propertyPath: scenarioList.Array.data[1].lightingScenario
-      value: floor0_Composite_ScenarioLight
+      value: floor0_Composite_Light
       objectReference: {fileID: 0}
     - target: {fileID: 3523135912760036550, guid: bbcf6f60b690c4384adae727f4a3df3b,
         type: 3}
